@@ -1,0 +1,80 @@
+/* Blogger Template Style */
+@font-face {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/quicksand/v21/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58m-wi40.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: bootstrap-icons;
+  src: url(https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/fonts/bootstrap-icons.woff2) format("woff2");
+}
+
+/* CSS Variables */
+:root {
+  --max-width: 1600px;
+  --gap: 3rem;
+  --body-font: 'Quicksand', Arial, sans-serif;
+  --menu-font: 'Quicksand', Arial, sans-serif;
+  --title-font: 'Segoe UI', Arial, sans-serif;
+  --text-font: 'Quicksand', Arial, sans-serif;
+  --body-bg-color: #FFFFFF;
+  --body-bg: #F1F3F4 none repeat fixed top left;
+  --outer-bg: #F0F2F5;
+  --main-color: #FF7A18;
+  --title-color: #202124;
+  --title-hover-color: #1A73E8;
+  --meta-color: #959595;
+  --text-color: #474747;
+  --header-bg: #FFFFFF;
+  --header-color: #050505;
+  --header-hover-color: #1A73E8;
+  --submenu-bg: #FFFFFF;
+  --submenu-color: #202124;
+  --submenu-hover-color: #1A73E8;
+  --widget-bg: #FFFFFF;
+  --widget-title-color: #202124;
+  --post-title-color: #202124;
+  --post-title-hover-color: #1A73E8;
+  --post-text-color: #3C4043;
+  --footer-bg: #5CA2D2;
+  --footer-color: #F6F7F8;
+  --footer-hover-color: #1A73E8;
+}
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+}
+
+body {
+  position: relative;
+  background: var(--body-bg);
+  font-family: var(--body-font);
+  font-size: 14px;
+  color: var(--text-color);
+  line-height: 1.4em;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+  font-weight: 700;
+}
+
+/* Thêm các style khác từ tệp XML */
