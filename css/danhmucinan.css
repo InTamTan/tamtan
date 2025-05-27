@@ -1,0 +1,299 @@
+.category-container {
+    max-width: 900px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+  }
+  .category-box {
+    border: 2px solid #e53935;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.15);
+  }
+  .category-box h3 {
+    color: #e53935;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e53935;
+    padding-bottom: 8px;
+  }
+  .subcategory-list,
+  .subsubcategory-list {
+    list-style: none;
+    padding-left: 20px;
+  }
+  .subcategory-list > li {
+    margin-bottom: 8px;
+  }
+  .subcategory-list > li > a,
+  .subsubcategory-list > li > a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  .subcategory-list > li > a:hover,
+  .subsubcategory-list > li > a:hover {
+    color: #e53935;
+  }
+  /* Nếu có submenu cấp 2 */
+  .subcategory-list > li > ul {
+    margin-top: 6px;
+  }
+  .tam-tan-contact-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 35px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.box-style {
+  border: 2px solid #e53935;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 20px rgba(229, 57, 53, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.box-style:hover {
+  box-shadow: 0 8px 30px rgba(229, 57, 53, 0.3);
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.category-title {
+  color: #e53935;
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e53935;
+  padding-bottom: 8px;
+}
+
+.category-list, .submenu {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.category-list > li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Ẩn submenu mặc định */
+.submenu {
+  display: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+/* Kiểu nút toggle cho mục con */
+.toggle-submenu {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+/* Hiệu ứng hover và focus cho toggle */
+.toggle-submenu:hover, .toggle-submenu:focus {
+  color: #e53935;
+  transform: scale(1.05);
+}
+
+/* Style cho các link bài con */
+.category-list a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.category-list a:hover {
+  color: #e53935;
+  transform: scale(1.05);
+  text-shadow: 0 0 6px rgba(229, 57, 53, 0.7);
+  position: relative;
+  z-index: 10;
+}
+.category-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(229, 57, 53, 0.3);
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  
+  .subcategory-list li a:hover {
+    color: #e53935;
+    text-shadow: 0 0 6px rgba(229, 57, 53, 0.7);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  body {
+    background-color: #ffffff !important;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .category-container {
+    max-width: 900px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .category-box {
+    border: 2px solid #e53935;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .category-box:hover {
+    box-shadow: 0 8px 30px rgba(229, 57, 53, 0.3);
+    transform: scale(1.02);
+    z-index: 10;
+    position: relative;
+  }
+
+  .category-box h3 {
+    color: #e53935;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e53935;
+    padding-bottom: 8px;
+  }
+
+  /* Khung nhóm con (group-box) */
+  .group-box {
+    border: 1.5px solid #e53935;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(229, 57, 53, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .group-box:hover {
+    background-color: #ffe6e3;
+    box-shadow: 0 5px 15px rgba(229, 57, 53, 0.4);
+    transform: scale(1.02);
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+
+  .group-title {
+    display: block;
+    color: #d84315;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  ul.subcategory-list,
+  ul.subsubcategory-list {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .subcategory-list > li,
+  .subsubcategory-list > li {
+    margin-bottom: 8px;
+  }
+
+  .subcategory-list > li > a,
+  .subsubcategory-list > li > a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .subcategory-list > li > a:hover,
+  .subsubcategory-list > li > a:hover {
+    color: #e53935;
+    transform: scale(1.05);
+    text-shadow: 0 0 6px rgba(229, 57, 53, 0.7);
+    position: relative;
+    z-index: 20;
+  }
+
+  /* Căn chỉnh đoạn text không link trong danh sách */
+  .subcategory-list > li > span.group-title {
+    cursor: default;
+    user-select: none;
+  }
+/* Khung viền cho các mục con */
+.subcategory-list > li,
+.subsubcategory-list > li {
+  border: 1.5px solid #e53935; /* viền màu đỏ */
+  border-radius: 8px;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hiệu ứng hover cho khung */
+.subcategory-list > li:hover,
+.subsubcategory-list > li:hover {
+  background-color: #ffe6e3;
+  box-shadow: 0 5px 15px rgba(229, 57, 53, 0.4);
+  transform: scale(1.02);
+  position: relative;
+  z-index: 10;
+}
+
+/* Mục liên kết chiếm toàn bộ ô, dễ click */
+.subcategory-list > li > a,
+.subsubcategory-list > li > a {
+  display: inline-block;
+  width: 100%;
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hiệu ứng hover cho link */
+.subcategory-list > li > a:hover,
+.subsubcategory-list > li > a:hover {
+  color: #e53935;
+  transform: scale(1.05);
+  text-shadow: 0 0 6px rgba(229, 57, 53, 0.7);
+  position: relative;
+  z-index: 20;
+}
+.no-style-link {
+    color: inherit;           /* kế thừa màu chữ cha */
+    text-decoration: none;    /* bỏ gạch chân */
+    cursor: pointer;          /* vẫn có hiệu ứng con trỏ */
+  }
+  
+  .no-style-link:hover,
+  .no-style-link:focus,
+  .no-style-link:active {
+    color: inherit;           /* không đổi màu khi hover/focus/active */
+    text-decoration: none;    /* không gạch chân */
+  }

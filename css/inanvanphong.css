@@ -1,0 +1,119 @@
+.tam-tan-contact-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 35px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .tam-tan-contact-section h2 {
+    color: #e53935;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e53935;
+    padding-bottom: 10px;
+  }
+  
+  .tam-tan-contact-section h3 {
+    color: #d84315;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1.5px solid #ff7043;
+    padding-bottom: 6px;
+  }
+  
+  .tam-tan-contact-section p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #000000dd;
+  }
+  
+  .tam-tan-contact-section ul {
+    list-style: disc inside;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+  
+  .tam-tan-contact-section ul li {
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+    cursor: default;
+  }
+  
+  .tam-tan-contact-section ul li:hover {
+    color: #e53935;
+    text-shadow: 0 0 6px rgba(229, 57, 53, 0.6);
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+  }
+  
+  .tam-tan-contact-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .tam-tan-contact-section th, 
+  .tam-tan-contact-section td {
+    border: 1px solid #e53935;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #fff;
+  }
+  
+  .tam-tan-contact-section th {
+    background-color: #f7d3d0;
+    color: #e53935;
+    font-weight: 700;
+  }
+  
+  .tam-tan-contact-section a {
+    color: #e53935;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .tam-tan-contact-section a:hover {
+    color: #b71c1c;
+    text-decoration: underline;
+  }
+  .tam-tan-contact-section p:hover,
+  .tam-tan-contact-section li:hover,
+  .tam-tan-contact-section a:hover,
+  .tam-tan-contact-section h2:hover,
+  .tam-tan-contact-section h3:hover,
+  .tam-tan-contact-section th:hover,
+  .tam-tan-contact-section td:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    position: relative;
+    color: #e53935; /* Có thể thêm đổi màu nếu muốn */
+    text-shadow: 0 0 6px rgba(229, 57, 53, 0.7); /* Hiệu ứng ánh sáng */
+    cursor: pointer;
+  }
+  .tam-tan-contact-section .logo-img {
+    max-width: 800px;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .tam-tan-contact-section .logo-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4);
+    border-radius: 12px;
+  }

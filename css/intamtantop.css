@@ -1,0 +1,72 @@
+.tam-tan-article {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fffdf8;
+    border: 2px solid #e0dcd5;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .tam-tan-header {
+    background: linear-gradient(120deg, #d84315, #e65100);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .tam-tan-header h1 {
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+  
+  .tam-tan-header p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .tam-tan-section {
+    background: #fff;
+    border-left: 4px solid #ff5722;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+  }
+  
+  .tam-tan-section ul {
+    padding-left: 20px;
+    list-style: square;
+  }
+  
+  .tam-tan-section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  .tam-tan-image-box {
+    margin: 25px 0;
+    text-align: center;
+  }
+  
+  .tam-tan-image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .tam-tan-image-box img:hover {
+    transform: scale(1.02);
+  }
+  
+  .image-caption {
+    font-size: 14px;
+    color: #777;
+    margin-top: 8px;
+    font-style: italic;
+  }
