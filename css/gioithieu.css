@@ -1,0 +1,139 @@
+/* Tổng thể vùng IN TAM TÂN */
+.tam-tan-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fffdf8;
+    border: 2px solid #e0dcd5;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .tam-tan-container:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header nổi bật */
+  .tam-tan-header {
+    background: linear-gradient(120deg, #e53935, #e35d5b);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Phần tiêu đề nhỏ */
+  .tam-tan-header h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .tam-tan-header p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Mỗi mục section */
+  .tam-tan-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 5px solid #e53935;
+    background: #fff;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+  }
+  
+  .tam-tan-section:hover {
+    transform: translateX(5px);
+  }
+  
+  /* Tiêu đề mục */
+  .tam-tan-section h2 {
+    color: #e53935;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Danh sách nội dung */
+  .tam-tan-section ul {
+    padding-left: 20px;
+    list-style: square;
+  }
+  
+  .tam-tan-section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  /* Phần liên hệ cuối cùng */
+  .tam-tan-contact {
+    background: #fceeea;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #e53935;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+  }
+  
+  .tam-tan-contact h2 {
+    color: #c62828;
+    margin-bottom: 15px;
+  }
+  
+  .tam-tan-contact p {
+    margin: 6px 0;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  
+  /* Responsive cho mobile */
+  @media (max-width: 600px) {
+    .tam-tan-container {
+      padding: 20px;
+    }
+  
+    .tam-tan-header h1 {
+      font-size: 22px;
+    }
+  
+    .tam-tan-section h2 {
+      font-size: 18px;
+    }
+  }
+  .tam-tan-download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #e53935, #f4511e);
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    border: none;
+  }
+  
+  .tam-tan-download-btn:hover {
+    background: linear-gradient(135deg, #d32f2f, #e64a19);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .tam-tan-download-btn i {
+    margin-right: 8px;
+  }
+  .tam-tan-download-box {
+    margin-top: 30px;
+    text-align: center;
+    background: #fff3e0;
+    border: 2px dashed #ff7043;  /* CHÍNH LÀ VIỀN CAM NÉT ĐỨT */
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    animation: pulseBorder 2s infinite;
+  }
+  
