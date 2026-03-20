@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Tam Tân - Quản Lý Nội Bộ</title>
+    <style>
+        :root { 
+            --neon: #00ff88; 
+            --bg: #050508; 
+            --card: rgba(255, 255, 255, 0.03); 
+            --border: rgba(255, 255, 255, 0.1); 
+            --glass: blur(15px);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+        body { 
+            margin: 0; padding: 0; 
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
+            background: radial-gradient(circle at top right, #1a1a2e, var(--bg)); 
+            color: #fff; display: flex; flex-direction: column; align-items: center; 
+            min-height: 100vh; overflow-x: hidden;
+        }
+    
+        /* Container chính */
+        .login-container { 
+            width: 100%; max-width: 1100px; padding: 40px 20px; box-sizing: border-box; 
+        }
+    
+        /* Thẻ Card chung (Login, Admin, v.v.) */
+        .login-card { 
+            background: var(--card); border: 1px solid var(--border); border-radius: 24px; 
+            padding: 30px; backdrop-filter: var(--glass); -webkit-backdrop-filter: var(--glass);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5); margin-bottom: 30px; 
+            text-align: center; position: relative; overflow: hidden;
+        }
+    
+        /* Hiệu ứng thanh neon chạy trên đầu card */
+        .login-card::before { 
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; 
+            background: linear-gradient(90deg, transparent, var(--neon), transparent); 
+        }
+    
+        /* Input & Select */
+        .input-wrapper { margin-bottom: 20px; text-align: left; }
+        .input-wrapper input, .ne-select { 
+            width: 100%; padding: 14px; background: rgba(0, 0, 0, 0.4); 
+            border: 1px solid var(--border); border-radius: 12px; color: #fff; 
+            box-sizing: border-box; outline: none; transition: var(--transition);
+        }
+        .input-wrapper input:focus, .ne-select:focus { 
+            border-color: var(--neon); box-shadow: 0 0 15px rgba(0, 255, 136, 0.2); 
+        }
+    
+        /* Nút bấm chính */
+        .login-btn { 
+            width: 100%; padding: 16px; background: var(--neon); border: none; 
+            border-radius: 12px; color: #000; font-weight: 800; cursor: pointer; 
+            text-transform: uppercase; letter-spacing: 1px; transition: var(--transition);
+        }
+        .login-btn:hover { 
+            transform: translateY(-2px); box-shadow: 0 0 25px var(--neon); opacity: 0.9;
+        }
+    
+        /* Grid Bảng Trực */
+        .staff-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 20px; width: 100%; margin-top: 30px;
+        }
+    
+        /* Thẻ nhân viên (Staff Card) - PHẦN ĐẸP NHẤT */
+        .staff-card { 
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+            border: 1px solid var(--border); border-radius: 20px; padding: 25px; 
+            text-align: center; transition: var(--transition); backdrop-filter: var(--glass);
+        }
+        .staff-card:hover { 
+            transform: translateY(-8px); border-color: var(--neon);
+            box-shadow: 0 15px 30px rgba(0, 255, 136, 0.1);
+        }
+    
+        /* Badge trạng thái */
+        .status-badge { 
+            background: linear-gradient(90deg, rgba(0, 255, 136, 0.15), rgba(0, 255, 136, 0.05));
+            color: var(--neon); border: 1px solid rgba(0, 255, 136, 0.3); 
+            padding: 6px 16px; border-radius: 20px; font-size: 12px; 
+            font-weight: 600; margin-top: 12px; display: inline-block;
+        }
+    
+        /* Bảng Admin */
+        .admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .admin-table th { 
+            color: var(--neon); border-bottom: 1px solid var(--border); 
+            padding: 12px; font-size: 13px; text-transform: uppercase; text-align: left; 
+        }
+        .admin-table td { 
+            padding: 14px 12px; border-bottom: 1px solid rgba(255,255,255,0.03); 
+            font-size: 14px; text-align: left; 
+        }
+    
+        .btn-sm { 
+            padding: 6px 12px; border-radius: 8px; cursor: pointer; 
+            background: transparent; border: 1px solid; font-size: 11px; font-weight: 600;
+            transition: var(--transition);
+        }
+        .btn-sm:hover { filter: brightness(1.2); transform: scale(1.05); }
+    
+        .hidden { display: none !important; }
+    
+        /* Tiêu đề trang */
+        h2 { 
+            text-align: center; letter-spacing: 4px; text-transform: uppercase; 
+            background: linear-gradient(to right, #fff, var(--neon));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        /* Style riêng cho nút Zalo trong Card */
+.zalo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    padding: 10px;
+    background: rgba(0, 132, 255, 0.1); /* Màu xanh Zalo nhạt */
+    color: #0084ff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(0, 132, 255, 0.2);
+    transition: var(--transition);
+}
+
+.zalo-link:hover {
+    background: #0084ff;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 132, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* Chỉnh lại Avatar cho cân đối */
+.staff-avatar {
+    font-size: 45px;
+    margin-bottom: 10px;
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div id="auth-box" class="login-card" style="max-width: 400px; margin: 0 auto;">
+            <h2 id="auth-title">Đăng Nhập</h2>
+            <div id="reg-fields" class="hidden">
+                <div class="input-wrapper"><input type="text" id="reg-name" placeholder="Họ và Tên"></div>
+                <div class="input-wrapper"><input type="text" id="reg-phone" placeholder="Số Zalo"></div>
+                <div class="input-wrapper">
+                    <select id="reg-avatar" class="ne-select">
+                        <option value="👤">Nhân viên</option>
+                        <option value="🎨">Thiết kế</option>
+                        <option value="🖨️">Kỹ thuật</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-wrapper"><input type="email" id="email" placeholder="Email công ty"></div>
+            <div class="input-wrapper"><input type="password" id="password" placeholder="Mật khẩu"></div>
+            <button class="login-btn" onclick="handleAuth()">Xác Nhận</button>
+            <p><a href="javascript:void(0)" onclick="toggleMode()" id="toggle-link" style="color: var(--neon); text-decoration: none; font-size: 13px;">Chưa có tài khoản? Đăng ký</a></p>
+        </div>
+
+        <div id="main-ui" class="login-card hidden">
+            <h2 id="user-greeting" style="color: var(--neon); margin-bottom: 5px;">Chào bạn!</h2>
+            <p id="user-role-text" style="font-size: 12px; color: #888; margin-bottom: 20px;"></p>
+
+            <div id="staff-controls" class="hidden">
+                <select id="work-status" class="ne-select" style="max-width: 250px; margin-bottom: 10px;">
+                    <option value="Ca Sáng ☀️">Ca Sáng ☀️</option>
+                    <option value="Ca Chiều 🌙">Ca Chiều 🌙</option>
+                    <option value="Cả Ngày 🔥">Cả Ngày 🔥</option>
+                    <option value="Nghỉ phép ❌">Nghỉ phép ❌</option>
+                </select><br>
+                <button class="login-btn" onclick="updateStatus()" style="max-width: 250px;">Cập Nhật Lên Bảng</button>
+            </div>
+
+            <p id="pending-msg" class="hidden" style="color: #ffaa00;">⏳ Tài khoản đang chờ sếp duyệt để bắt đầu trực.</p>
+            <button onclick="logout()" style="background:none; border:none; color:#ff4444; cursor:pointer; margin-top:15px;">[ Thoát ]</button>
+
+            <div id="admin-panel" class="hidden" style="margin-top: 30px; border-top: 1px solid var(--border); padding-top: 20px;">
+                <h3 style="color: var(--neon); text-align: left; font-size: 16px;">🛠️ DUYỆT NHÂN VIÊN MỚI</h3>
+                <table class="admin-table">
+                    <thead><tr><th>Tên</th><th>Zalo</th><th>Thao tác</th></tr></thead>
+                    <tbody id="admin-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; margin-top: 40px; letter-spacing: 3px; text-transform: uppercase;">Lịch Trực Hôm Nay</h2>
+        <div id="public-board" class="staff-grid" style="margin-top: 20px;"></div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, getDoc, collection, onSnapshot, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+    
+        const firebaseConfig = { 
+            apiKey: "AIzaSyA1N0VP1w4R8cMj4sOR7_-EWEybR1SThgA", 
+            authDomain: "sinup-626bd.firebaseapp.com", 
+            projectId: "sinup-626bd", 
+            storageBucket: "sinup-626bd.firebasestorage.app", 
+            messagingSenderId: "600624155042", 
+            appId: "1:600624155042:web:492196cf636df2b21acafb" 
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        
+        const ADMIN_EMAIL = "intamtan.net@gmail.com";
+        let isReg = false;
+    
+        // --- 1. LOGIC HIỂN THỊ BẢNG TRỰC (CHẠY NGAY KHÔNG CẦN ĐĂNG NHẬP) ---
+        onSnapshot(collection(db, "display_board"), (snap) => {
+            const board = document.getElementById('public-board');
+            board.innerHTML = "";
+            let list = [];
+            snap.forEach(d => list.push(d.data()));
+            
+            list.sort((a, b) => b.time - a.time);
+    
+            if (list.length === 0) {
+                board.innerHTML = "<p style='text-align:center; width:100%; color:#888;'>Hôm nay chưa có ai đăng ký trực.</p>";
+                return;
+            }
+    
+            list.forEach(v => {
+    board.innerHTML += `
+    <div class="staff-card">
+        <div class="staff-avatar">${v.ava || '👤'}</div>
+        <div class="staff-name">${v.name}</div>
+        <div class="status-badge">${v.status}</div>
+        <a href="https://zalo.me/${v.phone}" target="_blank" class="zalo-link">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;">
+                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+            Nhắn Zalo
+        </a>
+    </div>`;
+});
+        });
+    
+        // --- 2. LOGIC QUẢN LÝ TÀI KHOẢN ---
+        window.toggleMode = () => {
+            isReg = !isReg;
+            document.getElementById('reg-fields').classList.toggle('hidden', !isReg);
+            document.getElementById('auth-title').innerText = isReg ? 'Đăng Ký' : 'Đăng Nhập';
+            document.getElementById('toggle-link').innerText = isReg ? 'Đã có tài khoản? Đăng nhập' : 'Chưa có tài khoản? Đăng ký';
+        };
+    
+        window.handleAuth = async () => {
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            try {
+                if(isReg) {
+                    const name = document.getElementById('reg-name').value;
+                    const phone = document.getElementById('reg-phone').value;
+                    if(!name || !phone) return alert("Vui lòng nhập đủ tên và Zalo!");
+                    const res = await createUserWithEmailAndPassword(auth, email, pass);
+                    await setDoc(doc(db, "users", res.user.uid), { 
+                        uid: res.user.uid, name, phone, 
+                        ava: document.getElementById('reg-avatar').value, 
+                        email, approved: false 
+                    });
+                    alert("Đăng ký thành công! Hãy báo sếp duyệt tài khoản.");
+                } else {
+                    await signInWithEmailAndPassword(auth, email, pass);
+                }
+            } catch (e) { alert("Lỗi: " + e.message); }
+        };
+    
+        onAuthStateChanged(auth, (user) => {
+            const authBox = document.getElementById('auth-box');
+            const mainUI = document.getElementById('main-ui');
+            
+            if(user) {
+                authBox.classList.add('hidden');
+                mainUI.classList.remove('hidden');
+                const isAdmin = user.email === ADMIN_EMAIL;
+                
+                onSnapshot(doc(db, "users", user.uid), (d) => {
+                    const data = d.data();
+                    if(!data) return;
+                    document.getElementById('user-greeting').innerText = "Chào " + data.name + "!";
+                    document.getElementById('user-role-text').innerText = isAdmin ? "Quyền hạn: Quản trị viên" : "Quyền hạn: Nhân viên";
+                    
+                    if (isAdmin || data.approved) {
+                        document.getElementById('staff-controls').classList.remove('hidden');
+                        document.getElementById('pending-msg').classList.add('hidden');
+                    } else {
+                        document.getElementById('staff-controls').classList.add('hidden');
+                        document.getElementById('pending-msg').classList.remove('hidden');
+                    }
+                });
+    
+                if(isAdmin) {
+                    document.getElementById('admin-panel').classList.remove('hidden');
+                    onSnapshot(collection(db, "users"), (snap) => {
+                        const tbody = document.getElementById('admin-table-body');
+                        tbody.innerHTML = "";
+                        snap.forEach(docSnap => {
+                            const u = docSnap.data();
+                            if(u.email === ADMIN_EMAIL) return;
+                            tbody.innerHTML += `<tr>
+                                <td>${u.name}</td>
+                                <td>${u.phone}</td>
+                                <td>
+                                    ${!u.approved ? `<button class="btn-sm" style="color:var(--neon); border-color:var(--neon)" onclick="approveUser('${u.uid}')">Duyệt</button>` : '✅ Đã duyệt'}
+                                    <button class="btn-sm" style="color:#ff4444; border-color:#ff4444; margin-left:5px;" onclick="delUser('${u.uid}')">Xóa</button>
+                                </td>
+                            </tr>`;
+                        });
+                    });
+                }
+            } else {
+                authBox.classList.remove('hidden');
+                mainUI.classList.add('hidden');
+                document.getElementById('admin-panel').classList.add('hidden');
+            }
+        });
+    
+        window.approveUser = async (uid) => {
+            try {
+                const uDoc = await getDoc(doc(db, "users", uid));
+                if(uDoc.exists()){
+                    const userData = uDoc.data();
+                    await updateDoc(doc(db, "users", uid), { approved: true });
+                    await setDoc(doc(db, "display_board", uid), {
+                        name: userData.name,
+                        phone: userData.phone,
+                        ava: userData.ava || '👤',
+                        status: "Vừa mới duyệt ✅",
+                        time: Date.now()
+                    });
+                    alert("Đã duyệt nhân viên thành công!");
+                }
+            } catch (e) { alert("Lỗi duyệt: " + e.message); }
+        };
+    
+        window.delUser = async (uid) => {
+            if(confirm("Bạn muốn xóa nhân viên này khỏi hệ thống?")) {
+                await deleteDoc(doc(db, "users", uid));
+                await deleteDoc(doc(db, "display_board", uid));
+            }
+        };
+    
+        window.updateStatus = async () => {
+            const user = auth.currentUser;
+            const status = document.getElementById('work-status').value;
+            if (!user) return alert("Vui lòng đăng nhập lại!");
+            try {
+                const userRef = doc(db, "display_board", user.uid);
+                const uDoc = await getDoc(userRef);
+                if (uDoc.exists()) {
+                    await updateDoc(userRef, { status: status, time: Date.now() });
+                } else {
+                    const infoDoc = await getDoc(doc(db, "users", user.uid));
+                    const info = infoDoc.data() || { name: "CEO", phone: "0904370010", ava: "👨‍💼" };
+                    await setDoc(userRef, {
+                        name: info.name,
+                        phone: info.phone,
+                        ava: info.ava || '👤',
+                        status: status,
+                        time: Date.now()
+                    });
+                }
+                alert("Đã cập nhật lịch trực thành công!");
+            } catch (e) { alert("Lỗi cập nhật: " + e.message); }
+        };
+    
+        window.logout = () => signOut(auth);
+    </script>
+</body>
+</html>
