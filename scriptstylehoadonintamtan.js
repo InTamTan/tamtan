@@ -60,7 +60,7 @@ function setupEventListeners() {
     document.getElementById('globalSearch').addEventListener('input', renderInvoices);
     document.getElementById('btnAddRow').addEventListener('click', () => addProductRow());
 
-    // FIX TRIỆT ĐỂ: Lắng nghe toàn bộ sự kiện gõ, chỉnh sửa trên ô nhập VAT
+    // Lắng nghe toàn bộ sự kiện gõ, chỉnh sửa trên ô nhập VAT
     const vatInput = document.getElementById('vatOverride');
     if (vatInput) {
         vatInput.addEventListener('input', calculateTableTotals);
@@ -68,7 +68,7 @@ function setupEventListeners() {
         vatInput.addEventListener('keyup', calculateTableTotals);
     }
 
-    // Kinh doanh chọn ảnh bill chuyển khoản -> tự động nén mã hóa lưu lên Cloudflare
+    // Kinh doanh chọn ảnh bill chuyển khoản
     document.getElementById('fileUploadInput').addEventListener('change', function(e) {
         const file = e.target.files[0];
         if (!file) return;
@@ -138,13 +138,11 @@ function calculateTableTotals() {
     
     const vatOverrideInput = document.getElementById('vatOverride');
     
-    // Đọc số phần trăm người dùng chủ động gõ vào ô. Nếu bạn xóa trống thì mặc định tính là 8%
     let vatPercent = parseFloat(vatOverrideInput.value);
     if (isNaN(vatPercent)) {
         vatPercent = 8; 
     }
     
-    // Tính toán số tiền thuế dựa trên số % thực tế đang có
     let vat = Math.round(subtotal * (vatPercent / 100));
     if (subtotal === 0) vat = 0;
     
@@ -162,7 +160,7 @@ function openModal(id = null) {
     document.getElementById('itemsTableBody').innerHTML = '';
     document.getElementById('fileLinkData').value = '';
     document.getElementById('uploadStatusText').innerText = "Chưa có file nào được chọn";
-    document.getElementById('vatOverride').value = ''; // Tuân thủ placeholder
+    document.getElementById('vatOverride').value = ''; 
     
     document.getElementById('modalTitle').innerText = "Tạo yêu cầu xuất hóa đơn đỏ";
     document.getElementById('invoiceStatus').value = "Nháp";
@@ -178,7 +176,6 @@ function openModal(id = null) {
             document.getElementById('companyEmail').value = inv.companyEmail;
             document.getElementById('invoiceStatus').value = inv.status;
             
-            // Điền lại đúng số % thuế cũ đã lưu vào ô nhập VAT
             document.getElementById('vatOverride').value = inv.vatPercent !== undefined ? inv.vatPercent : '';
             document.getElementById('fileLinkData').value = inv.fileLink || '';
             
@@ -225,8 +222,8 @@ function handleAccFileUpload() {
     reader.onload = async function(evt) {
         const idx = invoices.findIndex(i => i.id === id);
         if (idx !== -1) {
-            invoices[idx].redInvoiceFile = evt.target.result; // Lưu file hóa đơn đỏ mã hóa
-            invoices[idx].status = 'Hoàn thành'; // Tự động duyệt đơn sang hoàn thành
+            invoices[idx].redInvoiceFile = evt.target.result; 
+            invoices[idx].status = 'Hoàn thành'; 
             closeAccModal();
             renderInvoices();
             await saveToCloudflare();
@@ -256,7 +253,6 @@ async function handleFormSubmit(e) {
         return;
     }
 
-    // Đọc số phần trăm người dùng chỉnh sửa khi bấm lưu form để tính tổng cuối cùng chính xác
     let vatPercent = parseFloat(document.getElementById('vatOverride').value);
     if (isNaN(vatPercent)) {
         vatPercent = 8; 
@@ -327,6 +323,7 @@ function renderInvoices() {
     });
 
     if (filtered.length === 0) {
+        // Đã xóa style="background:white" ở đây nếu có
         tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; color:var(--text-muted); padding: 30px;">Không tìm thấy dữ liệu hóa đơn nào phù hợp.</td></tr>`;
         return;
     }
@@ -360,10 +357,12 @@ function renderInvoices() {
         }
         
         const currentVat = i.vatPercent !== undefined ? i.vatPercent : 8;
+        
+        // ĐÃ SỬA LỖI Ở ĐÂY: Xóa bỏ background:#f1f5f9; gây ra mảng xám đè lên giao diện
         productsHtml += `
-            <tr style="background:#f1f5f9; font-weight:700;">
-                <td colspan="2">Tổng (gồm VAT ${currentVat}%):</td>
-                <td style="text-align:right; color:#ef4444;">${(i.totalCost || i.subtotal || 0).toLocaleString('vi-VN')}đ</td>
+            <tr style="font-weight:700; border-top: 1px dashed rgba(0,0,0,0.1);">
+                <td colspan="2" style="padding-top: 8px;">Tổng (gồm VAT ${currentVat}%):</td>
+                <td style="text-align:right; color:#ef4444; padding-top: 8px;">${(i.totalCost || i.subtotal || 0).toLocaleString('vi-VN')}đ</td>
             </tr>
         </table>`;
 
