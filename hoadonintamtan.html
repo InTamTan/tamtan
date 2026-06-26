@@ -182,7 +182,22 @@
             </div>
         </div>
     </div>
+<!-- Đặt đoạn script này ở cuối body -->
+<script type="module">
+    import { auth } from './auth.js';
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"; // Đảm bảo đường dẫn đúng
 
+    // Kiểm tra trạng thái đăng nhập ngay khi trang tải
+    onAuthStateChanged(auth, (user) => {
+        if (!user) {
+            // Nếu chưa đăng nhập, chuyển hướng về trang login ngay lập tức
+            window.location.href = 'login.html';
+        } else {
+            // Nếu đã đăng nhập, giữ người dùng ở lại trang
+            console.log("Đang đăng nhập với:", user.email);
+        }
+    });
+</script>
     <script src="scriptstylehoadonintamtan.js"></script>
 </body>
 </html>
