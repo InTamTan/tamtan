@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylehoadonintamtan.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/logo3-01.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app-container">
@@ -59,13 +60,15 @@
                             </tr>
                         </thead>
                         <tbody id="invoiceTableBody">
-                            </tbody>
+                            <!-- JS sẽ render ở đây -->
+                        </tbody>
                     </table>
                 </div>
             </section>
         </main>
     </div>
 
+    <!-- Modal Form Chính -->
     <div class="modal-overlay" id="invoiceModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -89,7 +92,8 @@
                             </tr>
                         </thead>
                         <tbody id="itemsTableBody">
-                            </tbody>
+                            <!-- Dòng sản phẩm -->
+                        </tbody>
                     </table>
                     
                     <div class="table-actions-row">
@@ -114,7 +118,7 @@
                 </div>
 
                 <div class="form-group" style="margin-top: 15px;">
-                    <label><i class="fa-solid fa-paperclip"></i> Tải ảnh Bill chuyển khoản / File đính kèm lên Cloud</label>
+                    <label><i class="fa-solid fa-paperclip"></i> Tải ảnh Bill chuyển khoản / File đính kèm</label>
                     <div class="file-upload-box">
                         <input type="file" id="fileUploadInput" accept="image/*,application/pdf">
                         <div class="upload-status-text" id="uploadStatusText">Chưa có file nào được chọn</div>
@@ -158,6 +162,7 @@
         </div>
     </div>
 
+    <!-- Modal Kế Toán -->
     <div class="modal-overlay" id="accountantUploadModal">
         <div class="modal-content" style="max-width: 450px;">
             <div class="modal-header">
@@ -165,7 +170,7 @@
                 <button type="button" class="close-modal" id="closeAccModalBtn">×</button>
             </div>
             <div class="form-group" style="padding: 10px 0;">
-                <label>Chọn file Hóa đơn đỏ (PDF hoặc Ảnh) để lưu trữ:</label>
+                <label>Chọn file Hóa đơn đỏ (PDF hoặc Ảnh):</label>
                 <div class="file-upload-box">
                     <input type="file" id="accFileInput" accept="image/*,application/pdf">
                 </div>
