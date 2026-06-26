@@ -1,3 +1,6 @@
+if (!localStorage.getItem('userRole')) {
+    window.location.href = 'login.html';
+}
 // --- ĐƯỜNG DẪN LINK API CLOUDFLARE WORKER ---
 const CLOUDFLARE_API_URL = "https://hoadonintamtan.catchudecan.workers.dev";
 
@@ -391,5 +394,32 @@ function renderInvoices() {
                 </td>
             </tr>
         `;
+    });
+}
+async function handleFormSubmit(e) {
+    e.preventDefault();
+    const newInvoice = {
+        id: Date.now(),
+        companyOwner: localStorage.getItem('companyId'), // Gắn mã công ty vào hóa đơn
+        // ... các trường khác
+    };
+    invoices.push(newInvoice);
+    await saveToCloudflare();
+    renderInvoices();
+}
+function renderInvoices() {
+    const role = localStorage.getItem('userRole');
+    const myId = localStorage.getItem('companyId');
+    
+    // Lọc dữ liệu: Nếu là admin thì lấy hết, nếu là user thì chỉ lấy của họ
+    let displayData = (role === 'admin') 
+        ? invoices 
+        : invoices.filter(i => i.companyOwner === myId);
+
+    // Tiếp tục code render của bạn với biến displayData thay vì invoices
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    displayData.forEach(i => {
+        // ... render code ...
     });
 }
