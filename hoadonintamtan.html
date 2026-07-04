@@ -129,6 +129,12 @@
         
         .mobile-toggle { display: none; text-align: center; margin-top: 15px; color: #0071e3; font-size: 13px; cursor: pointer; font-weight: 600; }
 
+        /* form-options định dạng dòng quên mật khẩu */
+        .form-options { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text-muted); margin-bottom: 25px; }
+        .form-options label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+        .form-options a { color: #0071e3; text-decoration: none; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
+        .form-options a:hover { opacity: 0.8; }
+
         /* --- GIAO DIỆN HÓA ĐƠN ĐỎ BÊN TRONG --- */
         .app-container { display: flex; min-height: 100vh; width: 100%; }
 
@@ -321,6 +327,13 @@
                         <label>Mật khẩu</label>
                         <input type="password" id="login-password" placeholder="••••••••">
                     </div>
+                    
+                    <!-- Dòng ghi nhớ mật khẩu và link quên mật khẩu bảo mật mới -->
+                    <div class="form-options">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a id="btn-forgot-password">Forgot password?</a>
+                    </div>
+                    
                     <button class="submit-btn" id="btn-login-submit">Sign in</button>
                     <p class="mobile-toggle" id="mobile-to-register">Chưa có tài khoản? Đăng ký</p>
                 </div>
@@ -581,7 +594,8 @@
     <!-- SCRIPT ENGINE CHUẨN XÁC HOÀN TOÀN -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+        // Bổ sung module sendPasswordResetEmail chính hãng Google Firebase
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
         import { getFirestore, doc, setDoc, getDoc, collection, onSnapshot, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
         const firebaseConfig = { 
@@ -604,7 +618,7 @@
         let currentFilter = 'all';
         let chartInstance = null;
 
-        // --- PHỒI BÀY CÁC HÀM PHỤC VỤ DỮ LIỆU DYNAMIC RA WINDOW NGAY LẬP TỨC ---
+        // --- BẢO ĐẢM PHẠM VI TOÀN CỤC CHO CÁC HÀM MODAL TRONG ĐIỀU HƯỚNG ---
         window.togglePanel = togglePanel;
         window.openModal = openModal;
         window.openAccUploadModal = openAccUploadModal;
@@ -664,7 +678,7 @@
             } catch (error) { console.error("Lỗi đẩy lên đám mây:", error); }
         }
 
-        // --- PHẦN HÀM XỬ LÝ SỰ KIỆN CƠ BẢN ---
+        // --- CÁC HÀM XỬ LÝ ĐĂNG NHẬP VÀ ĐĂNG KÝ CHUYÊN BIỆT ---
         function togglePanel(isRegister) {
             const authContainer = document.querySelector('.auth-container');
             if (isRegister) authContainer.classList.add('active');
@@ -695,6 +709,24 @@
                 alert("Đăng ký tài khoản thành công!");
                 togglePanel(false);
             } catch (e) { alert("Lỗi đăng ký: " + e.message); }
+        }
+
+        // --- XỬ LÝ QUÊN MẬT KHẨU TỰ ĐỘNG QUA EMAIL LINK ---
+        async function handleForgotPassword() {
+            let email = document.getElementById('login-email').value.trim();
+            
+            // Nếu khách chưa điền ô email, hiện prompt yêu cầu điền nhanh
+            if(!email) {
+                email = prompt("Vui lòng điền Email tài khoản của bạn để nhận link khôi phục mật khẩu:");
+                if(!email) return; // Nếu khách hủy prompt thì dừng lại
+            }
+
+            try {
+                await sendPasswordResetEmail(auth, email);
+                alert("Thành công! Hệ thống In Tam Tân đã gửi một liên kết đặt lại mật khẩu trực tiếp vào hòm thư: " + email + ". Vui lòng mở hòm thư (hoặc mục Thư rác/Spam nếu không thấy) để tiến hành khôi phục.");
+            } catch (e) {
+                alert("Lỗi hệ thống: " + e.message);
+            }
         }
 
         function logout() {
@@ -776,7 +808,7 @@
             }
 
             if (filtered.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; color:var(--text-muted); padding:40px; font-weight:500;">Không có dữ liệu hóa đơn đỏ nào được tìm thấy.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="5" style='text-align:center; color:var(--text-muted); padding:40px; font-weight:500;'>Không có dữ liệu hóa đơn đỏ nào được tìm thấy.</td></tr>`;
                 return;
             }
 
@@ -839,10 +871,10 @@
 
         // --- CÁC HOẠT ĐỘNG EVENT ĐIỀU KHIỂN GIAO DIỆN CHỦ ĐỘNG ---
         function setupEventListeners() {
-            // Đăng ký bộ lắng nghe sự kiện click trực tiếp để loại bỏ lỗi kẹt inline click
             document.getElementById('btn-login-submit')?.addEventListener('click', handleLogin);
             document.getElementById('btn-register-submit')?.addEventListener('click', handleRegister);
             document.getElementById('btn-sidebar-logout')?.addEventListener('click', logout);
+            document.getElementById('btn-forgot-password')?.addEventListener('click', handleForgotPassword);
             
             document.getElementById('mobile-to-register')?.addEventListener('click', () => togglePanel(true));
             document.getElementById('mobile-to-login')?.addEventListener('click', () => togglePanel(false));
@@ -1054,7 +1086,7 @@
             }
         }
 
-        // Khởi động trực tiếp lắng nghe khi module tải xong mà không bọc DOMContentLoaded
+        // Khởi chạy kích hoạt toàn bộ luồng xử lý
         setupEventListeners();
     </script>
 </body>
