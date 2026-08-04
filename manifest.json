@@ -2,7 +2,7 @@
   "name": "In Tam Tân - Xưởng In Ấn",
   "short_name": "In Tam Tân",
   "start_url": "/",
-  "display": "standalone",
+  "display": "standalone", 
   "background_color": "#ffffff",
   "theme_color": "#ff6600",
   "icons": [
