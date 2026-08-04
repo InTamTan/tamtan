@@ -1,569 +1,1256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
-    <title>In Tam Tân - Dịch vụ in ấn chất lượng cao tại Hà Nội</title>
-    <link rel="icon" type="image/png" href="images/logo3-01.svg" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Tam Tân - Báo Giá In Laser & Tính Giá Tự Động  </title>
+    <link rel="icon" type="image/png" href="images/logo3-01.svg" />
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:site_name" content="In Tam Tân" />
     <meta name="author" content="In Tam Tân" />
-    <meta name="keywords" content="in ấn Hà Nội, in UV, in offset, in card visit, In Tam Tân, gia công sau in" />
-    <meta name="description" content="In Tam Tân chuyên in UV, in offset, in decal, card visit, với giá tốt nhất tại Hà Nội. Máy in hiện đại, gia công chuyên nghiệp, bảo hành uy tín." />
+    <meta name="keywords" content="in laser Hà Nội, tính giá in tự động, in couche, in decal, in card visit, in kẹp file, In Tam Tân" />
+    <meta name="description" content="Công cụ tính giá in Laser tự động và bảng báo giá chi tiết dịch vụ in kỹ thuật số, decal, phong bì, kẹp file tại In Tam Tân Hà Nội." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.intamtan.net/intamtaninlaser.html" />
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts & CSS Dùng Chung -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVYS28KKCF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-      
         gtag('config', 'G-GVYS28KKCF');
-      </script>
-      <!-- Dữ liệu cấu trúc cho Website (Tổ chức) -->
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "In Tam Tân",
-          "url": "https://www.intamtan.net",
-          "logo": "https://www.intamtan.net/img/logo3-01.svg",
-          "sameAs": [
-            "https://www.facebook.com/people/Tam-T%C3%A2n/pfbid02Pn7rFcq4UM47YiDSaci6McuNxc3JMoq3UM5Xw5XZza1YfDWu767YQUjoMPvS37xDl/"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+84-904-370-010",
-            "contactType": "customer service",
-            "areaServed": "VN",
-            "availableLanguage": "Vietnamese"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Số 10, ngách 5, ngõ 360 Đê La Thành, Đống Đa",
-            "addressLocality": "Hà Nội",
-            "addressCountry": "VN"
-          }
+    </script>
+
+    <!-- Schema.org Data -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "In Tam Tân",
+        "alternateName": ["In Tam Tân", "Xưởng In Tam Tân Đê La Thành"],
+        "url": "https://www.intamtan.net/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "In Tam Tân",
+        "alternateName": ["In Tam Tân", "Xưởng In Tam Tân Đê La Thành"],
+        "url": "https://www.intamtan.net/",
+        "logo": "https://www.intamtan.net/img/logo3-01.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+84-904-370-010",
+          "contactType": "customer service"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Số 10, ngách 5, ngõ 360 Đê La Thành, Đống Đa",
+          "addressLocality": "Hà Nội",
+          "addressCountry": "VN"
         }
-        </script>
-        
-        <!-- Dữ liệu cấu trúc Breadcrumb -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "In Tam Tân",
-              "item": "https://www.intamtan.net/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Dịch vụ in ấn",
-              "item": "https://www.intamtan.net/#dich-vu"
-            }
-          ]
+      }
+    ]
+    </script>
+
+    <style>
+        /* CSS TỐI ƯU GIAO DIỆN GLASSMORPHISM CHO TẤT CẢ CÁC BẢNG & MÁY TÍNH GIÁ */
+        .calc-card-ios {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
-        </script>
-    
 
-    <!--Bootstrap ================================================== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
 
-    <!--Link Swiper's CSS ================================================== -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        .calc-select {
+            width: 100%;
+            height: 44px;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            background: rgba(255, 255, 255, 0.95);
+            color: #1c1c1e;
+            padding: 0 14px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            outline: none;
+        }
 
-    <!-- Style Sheet ================================================== -->
-    <link rel="stylesheet" href="styles.css">
+        .price-table-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
 
-    <!-- Google Fonts ================================================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        .price-table-header {
+            background: linear-gradient(135deg, #0088ff, #0055ff);
+            color: #ffffff;
+            padding: 14px 20px;
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .custom-glass-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .custom-glass-table th, .custom-glass-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--card-border);
+            font-size: 0.88rem;
+        }
+
+        .custom-glass-table th {
+            background: rgba(0, 136, 255, 0.08);
+            color: var(--text-main);
+            font-weight: 800;
+        }
+
+        .custom-glass-table td {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .custom-glass-table tbody tr:hover {
+            background: rgba(0, 136, 255, 0.05);
+        }
+
+        .price-highlight {
+            color: var(--accent-red);
+            font-weight: 800;
+        }
+
+        .receipt-card {
+            background: #ffffff;
+            color: #1c1c1e;
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 25px;
+            display: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .receipt-card h2 {
+            text-align: center;
+            color: #0088ff;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .receipt-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .receipt-table th, .receipt-table td {
+            border: 1px solid #e0e0e0;
+            padding: 8px 12px;
+            font-size: 0.85rem;
+        }
+
+        .receipt-table th {
+            background: #f4f6f9;
+            font-weight: 700;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- svg icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="arrow-left" viewBox="0 0 256 256">
-            <path fill="currentColor"
-                d="M220 128a4 4 0 0 1-4 4H49.66l65.17 65.17a4 4 0 0 1-5.66 5.66l-72-72a4 4 0 0 1 0-5.66l72-72a4 4 0 0 1 5.66 5.66L49.66 124H216a4 4 0 0 1 4 4" />
-        </symbol>
-        <symbol id="arrow-right" viewBox="0 0 256 256">
-            <path fill="currentColor"
-                d="m218.83 130.83l-72 72a4 4 0 0 1-5.66-5.66L206.34 132H40a4 4 0 0 1 0-8h166.34l-65.17-65.17a4 4 0 0 1 5.66-5.66l72 72a4 4 0 0 1 0 5.66" />
-        </symbol>
-        <symbol id="man" viewBox="0 0 512 512">
-            <path fill="currentColor"
-                d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6M432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480" />
-        </symbol>
-        <symbol id="search" viewBox="0 0 512 512">
-            <path fill="currentColor"
-                d="M456.69 421.39L362.6 327.3a173.8 173.8 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.8 173.8 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3M97.92 222.72a124.8 124.8 0 1 1 124.8 124.8a124.95 124.95 0 0 1-124.8-124.8" />
-        </symbol>
-        <symbol id="expand" viewBox="0 0 32 32">
-            <path fill="currentColor"
-                d="m25.545 23.328l-7.627-7.705l7.616-7.616l1.857 1.857l2.26-8.428l-8.428 2.258l1.836 1.836l-7.603 7.604l-7.513-7.59L9.81 3.695L1.392 1.394l2.215 8.44l1.848-1.83l7.524 7.604l-7.515 7.515l-1.856-1.855l-2.26 8.427l8.43-2.257L7.94 25.6l7.503-7.502l7.614 7.693l-1.867 1.848l8.416 2.3l-2.213-8.438z" />
-        </symbol>
-        <symbol id="wishlist" viewBox="0 0 512 512">
-            <path fill="currentColor"
-                d="M256 448a32 32 0 0 1-18-5.57c-78.59-53.35-112.62-89.93-131.39-112.8c-40-48.75-59.15-98.8-58.61-153C48.63 114.52 98.46 64 159.08 64c44.08 0 74.61 24.83 92.39 45.51a6 6 0 0 0 9.06 0C278.31 88.81 308.84 64 352.92 64c60.62 0 110.45 50.52 111.08 112.64c.54 54.21-18.63 104.26-58.61 153c-18.77 22.87-52.8 59.45-131.39 112.8a32 32 0 0 1-18 5.56" />
-        </symbol>
-        <symbol id="cart" viewBox="0 0 512 512">
-            <circle cx="176" cy="416" r="32" fill="currentColor" />
-            <circle cx="400" cy="416" r="32" fill="currentColor" />
-            <path fill="currentColor"
-                d="M456.8 120.78a23.92 23.92 0 0 0-18.56-8.78H133.89l-6.13-34.78A16 16 0 0 0 112 64H48a16 16 0 0 0 0 32h50.58l45.66 258.78A16 16 0 0 0 160 368h256a16 16 0 0 0 0-32H173.42l-5.64-32h241.66A24.07 24.07 0 0 0 433 284.71l28.8-144a24 24 0 0 0-5-19.93" />
-        </symbol>
-        <symbol id="play" viewBox="0 0 512 512">
-            <path fill="currentColor" d="m96 448l320-192L96 64z" />
-        </symbol>
-        <symbol id="down" viewBox="0 0 24 24">
-            <g fill="none" fill-rule="evenodd">
-                <path
-                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                <path fill="currentColor"
-                    d="M13.06 16.06a1.5 1.5 0 0 1-2.12 0l-5.658-5.656a1.5 1.5 0 1 1 2.122-2.121L12 12.879l4.596-4.596a1.5 1.5 0 0 1 2.122 2.12l-5.657 5.658Z" />
-            </g>
-        </symbol>
-        <symbol id="navbar-icon" viewBox="0 0 24 24">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 17h18M3 12h18M3 7h18" />
-        </symbol>
-    </svg>
+<body class="light-mode">
 
-    <div class="search-popup">
-        <div class="search-popup-container">
+    <!-- HEADER NAVIGATION CHUẨN IOS 26 -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo3-01.svg" alt="In Tam Tân Logo" class="logo-img" onerror="this.style.display='none'">
+            <span>IN TAM TÂN</span>
+        </a>
 
-            <form role="search" method="get" class="form-group" action="">
-                <input type="search" id="search-form" class="form-control border-0 border-bottom"
-                    placeholder="Type and press enter" value="" name="s" />
-                <button type="submit" class="search-submit border-0 position-absolute bg-white"
-                    style="top: 15px;right: 15px;"><svg class="search" width="24" height="24">
-                        <use xlink:href="#search"></use>
-                    </svg></button>
-            </form>
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <!-- 1. TRANG CHỦ -->
+                <li class="nav-item">
+                    <div class="neon-wrapper">
+                        <div class="neon-ring"></div>
+                        <a href="index.html">TRANG CHỦ</a>
+                    </div>
+                </li>
 
-            <h5 class="cat-list-title">Browse Categories</h5>
+                <!-- 2. LIÊN HỆ -->
+                <li class="nav-item">
+                    <div class="neon-wrapper">
+                        <div class="neon-ring"></div>
+                        <a href="lienheintamtan.html">LIÊN HỆ</a>
+                    </div>
+                </li>
 
-            <ul class="cat-list">
-                <li class="cat-list-item mb-3">
-                    <a href="#" title="Product-1">Product-1</a>
+                <!-- 3. GIỚI THIỆU -->
+                <li class="nav-item dropdown">
+                    <div class="neon-wrapper">
+                        <div class="neon-ring"></div>
+                        <a href="#" class="dropdown-toggle">GIỚI THIỆU ▾</a>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="gioithieuintamtan.html">Giới Thiệu Chung <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="topcongtyintamtan.html">Top Công Ty Uy Tín <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="intamtan.html">In Tam Tân <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="tamtantop.html">In Top Hà Nội <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="tamtandelathanh.html">In Đê La Thành <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="nhaintamtan.html">Nhà In Tam Tân <span class="badge">Tam Tân</span></a></li>
+                    </ul>
                 </li>
-                <li class="cat-list-item mb-3">
-                    <a href="#" title="Product-2">Product-2</a>
+
+                <!-- 4. DANH MỤC SẢN PHẨM -->
+                <li class="nav-item dropdown">
+                    <div class="neon-wrapper">
+                        <div class="neon-ring"></div>
+                        <a href="#" class="dropdown-toggle">DANH MỤC SẢN PHẨM ▾</a>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="danhmucintamtan.html" class="submenu-toggle">In Nhanh Văn Phòng ▸</a>
+                            <ul class="dropdown-menu submenu">
+                                <li><a href="gioithieunamecard.html">In Danh Thiếp - Namecard</a></li>
+                                <li><a href="gioithieuphongbi.html">In Phong Bì - Envelope</a></li>
+                                <li><a href="gioithieuchungchi.html">In Chứng Chỉ - Certificate</a></li>
+                                <li><a href="gioithieukyyeu.html">In Kỷ Yếu - Photobook</a></li>
+                                <li><a href="gioithieuthiepcuoi.html">In Thiệp Cưới - Wedding Card</a></li>
+                                <li><a href="gioithieutoroi.html">In Tờ Rơi - Flyer</a></li>
+                                <li><a href="gioithieucatlog.html">In Catalogue - Brochure</a></li>
+                                <li><a href="gioithieukepfile.html">In Kẹp File - Folder</a></li>
+                                <li><a href="gioithieuthenhua.html">In Thẻ Nhựa - Vipcard</a></li>
+                                <li><a href="gioithieutemnhan.html">In Tem Nhãn - Sticker</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="danhmucintamtan.html" class="submenu-toggle">In Quảng Cáo Khổ Lớn ▸</a>
+                            <ul class="dropdown-menu submenu">
+                                <li><a href="gioithieustande.html">In Standee X</a></li>
+                                <li><a href="gioithieubacklit.html">In Backlit Film</a></li>
+                                <li><a href="gioithieuposter.html">In Poster</a></li>
+                                <li><a href="gioithieucavas.html">In Tranh Canvas</a></li>
+                                <li><a href="gioithieudcantrong.html">In Decal Trong</a></li>
+                                <li><a href="gioithieuformex.html">In Formex</a></li>
+                                <li><a href="gioithieugiacuon.html">In Giá Cuốn</a></li>
+                                <li><a href="gioithieupp.html">In Decal PP - Poster</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="danhmucintamtan.html" class="submenu-toggle">In UV ▸</a>
+                            <ul class="dropdown-menu submenu">
+                                <li><a href="gioithieuinuvphang.html">In UV Phẳng</a></li>
+                                <li><a href="gioithieuinuvcuon.html">In UV Cuộn</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="danhmucintamtan.html" class="submenu-toggle">Khung Tranh - Backdrop ▸</a>
+                            <ul class="dropdown-menu submenu">
+                                <li><a href="khungtranhgo.html">Khung Tranh Gỗ</a></li>
+                                <li><a href="khungtranhsat.html">Khung Sắt Backdrop</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="danhmucintamtan.html" class="submenu-toggle">Hướng Dẫn Sử Dụng ▸</a>
+                            <ul class="dropdown-menu submenu">
+                                <li><a href="hdsdstandeintamtan.html">HDSD Standee</a></li>
+                                <li><a href="hdsdgiacuonintamtan.html">HDSD Giá Cuốn</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="kpopintamtan.html">In Ấn Phẩm KPOP <span class="badge">Tam Tân</span></a></li>
+                    </ul>
                 </li>
-                <li class="cat-list-item mb-3">
-                    <a href="#" title="Product-3">Product-3</a>
+
+                <!-- 5. MẪU HÀNG -->
+                <li class="nav-item dropdown">
+                    <div class="neon-wrapper">
+                        <div class="neon-ring"></div>
+                        <a href="#" class="dropdown-toggle">MẪU HÀNG ▾</a>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="giacuonnhuaintamtan.html">Giá Cuốn Tam Tân <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="giachuxintamtan.html">Giá Chữ X Tam Tân <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="chanchuaintamtan.html">Chân Chữ A <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="chanvongquayintamtan.html">Vòng Quay May Mắn <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="standesatintamtan.html">Standee Sắt 80x170 <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="giadotranhintamtan.html">Giá Đỡ Tranh <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="quaytrangtri.html">Quầy Kệ Nhựa <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="giachuxa4intamtan.html">Giá Chữ X A3 - A4 <span class="badge">Tam Tân</span></a></li>
+                    </ul>
                 </li>
-                <li class="cat-list-item mb-3">
-                    <a href="#" title="Product-4">Product-4</a>
-                </li>
-                <li class="cat-list-item mb-3">
-                    <a href="#" title="Product-5">Product-5</a>
-                </li>
-                <li class="cat-list-item mb-3">
-                    <a href="#" title="Product-6">Product-6</a>
-                </li>
-                <li class="cat-list-item mb-3">
-                    <a href="#" title="Product-7">Product-7</a>
+
+                <!-- 6. BÁO GIÁ IN -->
+                <li class="nav-item dropdown">
+                    <div class="neon-wrapper">
+                        <div class="neon-ring"></div>
+                        <a href="#" class="dropdown-toggle">BÁO GIÁ IN ▾</a>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">In Cơ Bản</li>
+                        <li><a href="intamtaninlaser.html">Báo Giá In Laser <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="intamtaninpp.html">Báo Giá In PP <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="intamtaninuv.html">Báo Giá In UV <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="intamtanformec.html">Báo Giá Formex <span class="badge">Tam Tân</span></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-header">In Quảng Cáo</li>
+                        <li><a href="intamtanstande.html">Báo Giá Chân Standee <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="intamtanbackdrop.html">Backdrop Sự Kiện <span class="badge">Tam Tân</span></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-header">Thẻ & Văn Phòng</li>
+                        <li><a href="intamtanthenhua.html">Báo Giá Thẻ Nhựa <span class="badge">Tam Tân</span></a></li>
+                        <li><a href="danhmucintamtan.html">Văn Phòng Phẩm <span class="badge">Tam Tân</span></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-header">Hỗ Trợ & Hoá Đơn</li>
+                        <li><a href="hoadonintamtan.html">Hoá Đơn <span class="badge badge-danger">Tam Tân</span></a></li>
+                        <li><a href="lienheintamtan.html">Liên Hệ Ngay <span class="badge badge-danger">Tam Tân</span></a></li>
+                    </ul>
                 </li>
             </ul>
+        </nav>
 
-        </div>
-    </div>
-
-
-    <!-- header section start  -->
-    <header id="header" class="site-header py-3 px-3 px-lg-5 position-absolute top-0 start-0 w-100 z-1">
-        <div class="container-fluid">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg">
-                    <button class="navbar-toggler d-flex d-lg-none order-3 p-0 border-0 shadow-none" type="button"
-                        data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <svg class="navbar-icon text-white" width="30" height="30">
-                            <use xlink:href="#navbar-icon"></use>
-                        </svg>
+        <div class="header-actions">
+            <!-- THANH TÌM KIẾM AESTHETIC VỚI VIỀN NEON -->
+            <div class="neon-wrapper search-container" id="searchContainer">
+                <div class="neon-ring"></div>
+                <div class="search-box">
+                    <button class="search-icon-btn" id="searchToggleBtn" title="Tìm kiếm">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     </button>
-                    <a href="index.html" class="navbar-brand order-2 order-lg-2 d-flex d-lg-none">
-                        <img src="images/logo2-01-01-01.svg" alt="Logo">
-                    </a>
-                    <div class="offcanvas offcanvas-end bg-black order-3" tabindex="-1" id="bdNavbar"
-                        aria-labelledby="bdNavbarOffcanvasLabel">
-                        <div class="offcanvas-body align-items-center">
-                            <div class="offcanvas-header p-0 py-4 ms-2">
-                                <button type="button" class="btn-close btn-close-white shadow-none"
-                                    data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
-                            </div>
-                            <div class="col-md-2 d-flex">
-                                <a href="index.html" class="navbar-brand order-2 order-lg-2 d-none d-lg-flex">
-                                    <img src="images/logo.png" alt="Logo">
-                                </a>
-                            </div>
-                            <div class="col-md-5 offset-lg-2">
-                                <div class="navbar-collapse order-1 order-lg-1 ms-3 ms-lg-0" id="navbarMenu">
-                                    <ul class="navbar-nav d-flex justify-content-center">
-                                        <li class="nav-item me-5">
-                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0"
-                                                href="index.html">Trang Chủ</a>
-                                        </li>
-                                        <li class="nav-item me-5">
-                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0"
-                                                href="lienheintamtan.html">Liên Hệ</a>
-                                        </li>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search products..." autocomplete="off">
+                </div>
+            </div>
 
-                                        <!-- Dropdown for Shop -->
-                                        <li class="nav-item me-5 dropdown">
-                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0 dropdown-toggle"
-                                                href="#" id="navbarDropdownShop" role="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                Giới Thiệu
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownShop">
-                                                <li><a class="dropdown-item" href="gioithieuintamtan.html">Giới Thiệu Chung <span
-                                                            class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="topcongtyintamtan.html">Top Công Ty Uy Tín
-                                                        <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="intamtan.html">In
-                                                            <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="tamtantop.html">In Top Hà Nội
-                                                                <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                            </li>
-                                                            <li><a class="dropdown-item" href="tamtandelathanh.html">In Đê La Thành
-                                                                    <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                                </li>
-                                                                <li><a class="dropdown-item" href="nhaintamtan.html">Nhà In
-                                                                        <span class="badge bg-primary">Tam Tân</span></a></li>
-                                            </ul>
-                                        </li>
+            <!-- Nút Theme Sáng/Tối -->
+            <div class="neon-wrapper">
+                <div class="neon-ring"></div>
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="Chuyển nền Sáng/Tối">
+                    <span id="themeIcon">☀️</span>
+                </button>
+            </div>
 
-                                        <!-- Dropdown for Blog -->
-                                        <li class="nav-item me-5 dropdown">
-                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0 dropdown-toggle"
-                                                href="#" id="navbarDropdownBlog" role="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                Danh Mục Sản Phẩm
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
-                                                <li class="dropdown-submenu">
-                                                    <a class="dropdown-item dropdown-toggle" href="#">In Nhanh Văn Phòng</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="gioithieunamecard.html">In Danh Thiếp - Namecard</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieuphongbi.html">In Phong Bì - Envelope</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieuchungchi.html">In Chứng Chỉ - Certificate</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieukyyeu.html">In Kỷ Yếu - Photobook</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieuthiepcuoi.html">In Thiệp Cưới - Wedding Card</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieutoroi.html">In Tờ Rơi - Flyer</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieucatlog.html">In Catalogue - Brochure</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieukepfile.html">In Kẹp File - Folder</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieuphongbi.html">In Phong Bì - Evenlope</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieuthenhua.html">In Thẻ Nhựa - Vipcard</a></li>
-                                                        <li><a class="dropdown-item" href="gioithieutemnhan.html">In Tem Nhãn - Sticker</a></li>
-                                                    </ul>
-                                                </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item dropdown-toggle" href="danhmucintamtan.html">In Quảng Cáo Khổ Lớn</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="gioithieustande.html">In Stande X</a></li>
-                                                            <li><a class="dropdown-item" href="gioithieubacklit.html">In Backlit</a></li>
-                                                            <li><a class="dropdown-item" href="gioithieuposter.html">In Poster</a></li>
-                                                            <li><a class="dropdown-item" href="gioithieucavas.html">In Tranh Canvas</a></li>
-                                                            <li><a class="dropdown-item" href="gioithieudcantrong.html">In Decal Trong</a></li>
-                                                            <li><a class="dropdown-item" href="gioithieuformex.html">In Formex</a></li>
-                                                            <li><a class="dropdown-item" href="gioithieugiacuon.html">In Giá Cuốn</a></li>
-                                                            <li><a class="dropdown-item" href="gioithieupp.html">In Decan PP - Poster</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item dropdown-toggle" href="danhmucintamtan.html">In UV</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="gioithieuinuvphang.html">In UV Phẳng</a></li>
-                                                            <li><a class="dropdown-item" href="gioithieuinuvcuon.html">In UV Cuộn</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item dropdown-toggle" href="danhmucintamtan.html">Khung Tranh - Backdrop</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="khungtranhgo.html">Khung Tranh Gỗ</a></li>
-                                                            <li><a class="dropdown-item" href="khungtranhsat.html">Khung Sắt Backdrop</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item dropdown-toggle" href="danhmucintamtan.html">Hướng Dẫn Sử Dụng</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="hdsdstandeintamtan.html">Hướng Dẫn Sử Dụng Stande</a></li>
-                                                            <li><a class="dropdown-item" href="hdsdgiacuonintamtan.html">Hướng Dẫn Sử Dụng Giá Cuốn</a></li>
-                                                        </ul>
-                                                    </li>
-                                                
-                                                <li><a class="dropdown-item" href="kpopintamtan.html">In Ấn Phẩm KPOP <span class="badge bg-primary">Tam Tân</span></a></li>
-                                            </ul>
-                                        </li>
+            <!-- Nút Tài Khoản / Chào Tên Đăng Ký -->
+            <div class="neon-wrapper">
+                <div class="neon-ring"></div>
+                <button class="auth-btn" id="openAuthModal">Tài Khoản</button>
+            </div>
+        </div>
+    </header>
 
-                                        <!-- Dropdown for Pages -->
-                                        <li class="nav-item me-5 dropdown">
-                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0 dropdown-toggle"
-                                                href="#" id="navbarDropdownSamples" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Mẫu Hàng
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownSamples">
-                                                <li>
-                                                    <a href="giacuonnhuaintamtan.html" class="dropdown-item">Giá Cuốn Tam Tân <span class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="giachuxintamtan.html" class="dropdown-item">Giá Chữ X Tam Tân <span class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="chanchuaintamtan.html" class="dropdown-item">Chân Chữ A <span class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="chanvongquayintamtan.html" class="dropdown-item">Vòng Quay May Mắn <span class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="standesatintamtan.html" class="dropdown-item">Standee Sắt 80x170 <span class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="giadotranhintamtan.html" class="dropdown-item">Giá Đỡ Tranh <span class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="quaytrangtri.html" class="dropdown-item">Quầy Kệ Nhựa <span class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="giachuxa4intamtan.html" class="dropdown-item">Giá Chữ X A3 - A4 <span class="badge bg-primary">Tam Tân</span></a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item me-5 dropdown">
-                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0 dropdown-toggle"
-                                                href="#" id="navbarDropdownBaoGia" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Báo Giá In
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBaoGia">
-                                                <li><h6 class="dropdown-header">📄 In Cơ Bản</h6></li>
-                                                <li><a class="dropdown-item" href="intamtaninlaser.html">Báo Giá In Laser <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                <li><a class="dropdown-item" href="intamtaninpp.html">Báo Giá In PP <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                <li><a class="dropdown-item" href="intamtaninuv.html">Báo Giá In UV <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                <li><a class="dropdown-item" href="intamtanformec.html">Báo Giá Formex <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                
-                                                <li><hr class="dropdown-divider"></li>
-                                        
-                                                <li><h6 class="dropdown-header">🖼️ In Quảng Cáo</h6></li>
-                                                <li><a class="dropdown-item" href="intamtanstande.html">Báo Giá Chân Standee <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                <li><a class="dropdown-item" href="intamtanbackdrop.html">Backdrop Sự Kiện <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                
-                                                <li><hr class="dropdown-divider"></li>
-                                        
-                                                <li><h6 class="dropdown-header">💳 Thẻ & Văn Phòng</h6></li>
-                                                <li><a class="dropdown-item" href="intamtanthenhua.html">Báo Giá Thẻ Nhựa <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                <li><a class="dropdown-item" href="danhmucintamtan.html">Văn Phòng Phẩm <span class="badge bg-primary">Tam Tân</span></a></li>
-                                        
-                                                <li><hr class="dropdown-divider"></li>
-                                        
-                                                <li><h6 class="dropdown-header">📞 Hỗ Trợ & Tư Vấn</h6></li>
-                                                <li><a class="dropdown-item" href="lienheintamtan.html">Liên Hệ Ngay <span class="badge bg-danger">Tam Tân</span></a></li>
-                                                <li><a class="dropdown-item" href="hoadonintamtan.html">Hoá Đơn <span class="badge bg-danger">Tam Tân</span></a></li>
-                                                <li><a class="dropdown-item" href="hdsdstandeintamtan.html">HDSD Standee <span class="badge bg-primary">Tam Tân</span></a></li>
-                                                <li><a class="dropdown-item" href="hdsdgiacuonintamtan.html">HDSD Giá Cuốn <span class="badge bg-primary">Tam Tân</span></a></li>
-                                            </ul>
-                                        </li>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <ul
-                                    class="user-items list-unstyled d-none d-lg-flex justify-content-end align-items-center order-3 flex-grow-1 gap-4 m-0">
-                                    <li class="search-item" data-bs-toggle="collapse" data-bs-target="#search-box"
-                                        aria-controls="search-box" aria-expanded="false" aria-label="Toggle navigation">
-                                        <a href="#" class="search-button">
-                                            <svg class="text-white search" width="20" height="20">
-                                                <use xlink:href="#search"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                    </li>
-                                    <li>
-                                        <a href="account.html">
-                                            <svg class="text-white man" width="20" height="20">
-                                                <use xlink:href="#man"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+    <!-- NỘI DUNG CHÍNH BÁO GIÁ & CÔNG CỤ TÍNH GIÁ -->
+    <main style="padding-top: 100px; padding-bottom: 60px;">
+        <section class="article-ios26-container">
+            
+            <!-- TIÊU ĐỀ CHÍNH -->
+            <h1 class="article-title-ios" style="text-align: center; margin-bottom: 25px;">
+                BÁO GIÁ IN LASER & TÍNH GIÁ TỰ ĐỘNG
+            </h1>
+
+            <!-- 1. BỘ CÔNG CỤ TÍNH GIÁ IN TỰ ĐỘNG -->
+            <div class="calc-card-ios">
+                <h2 style="text-align: center; color: #0088ff; font-weight: 800; font-size: 1.35rem; margin-bottom: 20px;">
+                    🧮 CÔNG CỤ TÍNH GIÁ IN TỰ ĐỘNG
+                </h2>
+
+                <div class="calc-grid">
+                    <div>
+                        <label style="display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 6px;">Số lượng tờ:</label>
+                        <div class="ios-input-box" style="height: 44px;">
+                            <input type="number" id="so-luong-to" min="1" value="100" style="font-weight: 700;">
                         </div>
                     </div>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <main id="billboard">
-        <div class="position-relative"
-            style="background: url('images/header-img.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 12vh;">
-            <div class="container">
-                <div class="offset-2 position-absolute top-50 start-0 translate-middle-y">
-                    <p class="fs-2 text-white">In Tam Tân</p>
-                    <h2 class="display-1 text-white fw-medium  mt-3"> <br>  </h2>
-                    <a href="https://intamtan.net/download/dl.pdf" class="btn btn-outline-light mt-3">Báo Giá In Nhanh </a>
+                    <div>
+                        <label style="display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 6px;">Phân loại giấy:</label>
+                        <select id="loai-giay" class="calc-select">
+                            <option value="1">Giấy thường / Decal giấy</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 6px;">Loại giấy cụ thể:</label>
+                        <select id="loai-giay-cu-the" class="calc-select">
+                            <option value="Op70">Op70</option>
+                            <option value="C120">C120</option>
+                            <option value="C150">C150</option>
+                            <option value="C200">C200</option>
+                            <option value="C250">C250</option>
+                            <option value="C300">C300</option>
+                            <option value="Giấy Mỹ Thuật">Giấy Mỹ Thuật</option>
+                            <option value="Decan Giấy">Decan Giấy</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 6px;">Kích thước giấy:</label>
+                        <select id="kich-thuoc-giay" class="calc-select">
+                            <option value="A4">A4</option>
+                            <option value="A3">A3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 6px;">Cán mờ:</label>
+                        <select id="can-mo" class="calc-select">
+                            <option value="khong">Không cán mờ</option>
+                            <option value="co">Cán mờ</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 6px;">Số mặt in:</label>
+                        <select id="in-mot-hai-mat" class="calc-select">
+                            <option value="mot-mat">Một mặt</option>
+                            <option value="hai-mat">Hai mặt</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 6px;">Gia công kèm theo:</label>
+                        <select id="khong-co-gia-cong" class="calc-select">
+                            <option value="khong-gia-cong">Không gia công</option>
+                            <option value="cat-be-gan">Cắt bế gân</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="neon-wrapper full-width-btn" style="margin-top: 15px;">
+                    <div class="neon-ring"></div>
+                    <button id="tinh-gia-button" class="ios-submit-btn btn-blue" style="font-size: 1rem;">
+                        ⚡ BẤM TÍNH GIÁ IN NGAY
+                    </button>
+                </div>
+
+                <p id="ket-qua" style="font-size: 1.25rem; text-align: center; font-weight: 800; color: var(--accent-red); margin-top: 20px;">
+                    Tổng giá tiền: 0 đồng
+                </p>
+
+                <!-- KHỐI PHIẾU THU & VIETQR TỰ ĐỘNG -->
+                <div id="phieu-thu" class="receipt-card">
+                    <div id="phieu-thu-container">
+                        <div style="text-align: center; margin-bottom: 10px;">
+                            <img src="images/logo3-01.svg" alt="Logo Tam Tan" style="height: 40px;">
+                            <p style="font-weight: 800; font-size: 1rem; margin-top: 4px; color: #111;">CÔNG TY TNHH TAM TÂN</p>
+                            <p style="font-size: 0.8rem; color: #666;">CS2: Số 10, ngách 5, ngõ 360 Đê La Thành, Đống Đa, Hà Nội</p>
+                        </div>
+                        <h2>PHIẾU THU BÁO GIÁ</h2>
+                        <div style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
+                            <p><strong>Mã số:</strong> <span id="phieu-thu-ma-so" style="color: #0088ff; font-weight: 800;"></span></p>
+                            <p><strong>Tên khách hàng:</strong> <span id="phieu-thu-ten-khach-hang">Khách lẻ Tam Tân</span></p>
+                            <p><strong>Ngày tạo:</strong> <span id="phieu-thu-ngay"></span></p>
+                        </div>
+
+                        <table id="phieu-thu-bang" class="receipt-table">
+                            <tr>
+                                <th>Tên hàng</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </table>
+
+                        <div style="margin-top: 15px; font-size: 0.9rem; line-height: 1.6;">
+                            <p><strong>Tổng số tiền:</strong> <span id="phieu-thu-tong-gia" style="color: #ff3b30; font-weight: 800; font-size: 1.1rem;"></span></p>
+                            <p><strong>Thành tiền (bằng chữ):</strong> <span id="phieu-thu-tong-tien-chu" style="font-style: italic; font-weight: 700;"></span></p>
+                            <p><strong>Đại diện cửa hàng:</strong> <span id="phieu-thu-dai-dien" style="font-weight: 700;">In Tam Tân</span></p>
+                        </div>
+
+                        <!-- Mã QR VietQR tự động -->
+                        <div style="text-align: center; margin-top: 20px; padding-top: 15px; border-top: 1px dashed #ddd;">
+                            <p style="font-weight: 800; font-size: 0.88rem; color: #107c41; margin-bottom: 8px;">📲 Quét mã VietQR chuyển khoản tự động:</p>
+                            <img id="qr-code-image" src="" alt="QR Code VietQR" style="width: 170px; height: 170px; border: 1px solid #e0e0e0; border-radius: 12px; padding: 5px;">
+                            <p style="font-size: 0.8rem; color: #555; margin-top: 6px;">Vietcombank: <strong>0021000773177</strong> - TRAN QUOC HOAN</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-</header>
-<!-- Liên kết đến tệp CSS riêng -->
-<link rel="stylesheet" type="text/css" href="css/inlaser.css">
-</head>
-<body>
-    <div id="tinh-gia-va-phieu-thu">
-        <div id="tinh-gia-in">
-            <h2 style="text-align: center; color: #4CAF50;">Tính Giá In</h2>
 
-            <label for="so-luong-to" style="display: block; margin-bottom: 10px;">Số lượng tờ:</label>
-            <input type="number" id="so-luong-to" min="1" value="100" style="display: block; width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
+            <!-- 2. BẢNG GIÁ TRANG IN LASER MÀU -->
+            <div class="price-table-card">
+                <div class="price-table-header">
+                    <span>📄</span> BẢNG GIÁ TRANG IN LASER MÀU
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Số trang in (trang)</th>
+                                <th>Giấy thường / Decal giấy</th>
+                                <th>Decal bạc / Trong / Nhựa</th>
+                                <th>Decal vỡ</th>
+                                <th>Phôi phong bì</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>01 - 10</strong></td><td>3.000 - 4.500đ</td><td>5.000đ</td><td>6.000đ</td><td>4.000đ</td></tr>
+                            <tr><td><strong>11 - 50</strong></td><td>2.500đ</td><td>4.500đ</td><td>5.600đ</td><td>3.000đ</td></tr>
+                            <tr><td><strong>51 - 100</strong></td><td>2.000đ</td><td>3.000đ</td><td>3.400đ</td><td>2.000đ</td></tr>
+                            <tr><td><strong>101 - 150</strong></td><td>1.850đ</td><td>2.500đ</td><td>2.800đ</td><td>1.600đ</td></tr>
+                            <tr><td><strong>151 - 200</strong></td><td>1.700đ</td><td>1.850đ</td><td>2.600đ</td><td>1.500đ</td></tr>
+                            <tr><td><strong>201 - 250</strong></td><td>1.500đ</td><td>1.750đ</td><td>2.400đ</td><td>1.400đ</td></tr>
+                            <tr><td><strong>251 - 300</strong></td><td>1.300đ</td><td>1.650đ</td><td>2.300đ</td><td>1.300đ</td></tr>
+                            <tr><td><strong>301 - 400</strong></td><td>1.200đ</td><td>1.600đ</td><td>2.200đ</td><td>1.200đ</td></tr>
+                            <tr><td><strong>401 - 500</strong></td><td>1.100đ</td><td>1.550đ</td><td>2.100đ</td><td>1.100đ</td></tr>
+                            <tr><td><strong>501 - 1.000</strong></td><td>1.000đ</td><td>1.500đ</td><td>2.000đ</td><td>1.000đ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-            <label for="loai-giay" style="display: block; margin-bottom: 10px;">Loại giấy:</label>
-            <select id="loai-giay" style="display: block; width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                <option value="1">Giấy thường/Decal giấy</option>
-            </select>
+            <!-- 3. BẢNG GIÁ IN LASER ĐEN TRẮNG -->
+            <div class="price-table-card">
+                <div class="price-table-header" style="background: linear-gradient(135deg, #4b5563, #374151);">
+                    <span>🖨️</span> BẢNG GIÁ IN LASER ĐEN TRẮNG
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Số lượng (trang)</th>
+                                <th>Đơn giá (đồng/trang A4)</th>
+                                <th>In trên giấy Decal</th>
+                                <th>Lưu ý kỹ thuật</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Dưới 500 trang</strong></td><td class="price-highlight">Liên hệ báo giá tốt</td><td>Liên hệ</td><td>Định lượng giấy dưới 150gsm</td></tr>
+                            <tr><td><strong>≥ 500 trang</strong></td><td class="price-highlight">Liên hệ báo giá sỉ</td><td>Liên hệ</td><td>Định lượng giấy dưới 150gsm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-            <label for="loai-giay-cu-the" style="display: block; margin-bottom: 10px;">Loại giấy cụ thể:</label>
-            <select id="loai-giay-cu-the" style="display: block; width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                <option value="Op70">Op70</option>
-                <option value="C120">C120</option>
-                <option value="C150">C150</option>
-                <option value="C200">C200</option>
-                <option value="C250">C250</option>
-                <option value="C300">C300</option>
-                <option value="Giấy Mỹ Thuật">Giấy Mỹ Thuật</option>
-                <option value="Decan Giấy">Decan Giấy</option>
-            </select>
+            <!-- 4. BẢNG GIÁ GIẤY & DECAL & PHONG BÌ -->
+            <div class="price-table-card">
+                <div class="price-table-header">
+                    <span>📜</span> BẢNG GIÁ MUA GIẤY & DECAL
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Loại giấy</th>
+                                <th>Đơn giá A3</th>
+                                <th>Đơn giá A4</th>
+                                <th>Loại Decal</th>
+                                <th>Đơn giá (đồng/tờ)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>C120</td><td>700đ</td><td>350đ</td><td>Decal giấy 21x31cm</td><td>1.000đ</td></tr>
+                            <tr><td>C150</td><td>800đ</td><td>400đ</td><td>Decal vỡ KT 26.5x43cm</td><td>16.000đ</td></tr>
+                            <tr><td>C200</td><td>1.000đ</td><td>500đ</td><td>Decal Bạc, Thiếc A3</td><td>3.000đ</td></tr>
+                            <tr><td>C250</td><td>1.200đ</td><td>600đ</td><td>Decal Thiếc 7 màu A3</td><td>8.000đ</td></tr>
+                            <tr><td>C300</td><td>1.400đ</td><td>700đ</td><td>Decal Nhựa trong, sữa A3</td><td>4.000đ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- BẢNG GIÁ PHONG BÌ GẤP SẴN -->
+            <div class="price-table-card">
+                <div class="price-table-header" style="background: linear-gradient(135deg, #0284c7, #0369a1);">
+                    <span>✉️</span> BẢNG GIÁ MUA PHONG BÌ GẤP SẴN
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Loại Phong Bì</th>
+                                <th>Đơn Giá (đồng/chiếc)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Phong bì gấp sẵn 12x22 (Offset 100)</strong></td>
+                                <td class="price-highlight">850đ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phong bì gấp sẵn 16x23 (Offset 100)</strong></td>
+                                <td class="price-highlight">800đ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phong bì gấp sẵn 25x34 (Offset 120)</strong></td>
+                                <td class="price-highlight">1.300đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-            <label for="kich-thuoc-giay" style="display: block; margin-bottom: 10px;">Kích thước giấy:</label>
-            <select id="kich-thuoc-giay" style="display: block; width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                <option value="A4">A4</option>
-                <option value="A3">A3</option>
+            <!-- 5. BẢNG GIÁ IN CARD VISIT -->
+            <div class="price-table-card">
+                <div class="price-table-header" style="background: linear-gradient(135deg, #ff3b30, #ff2d55);">
+                    <span>📇</span> BÁO GIÁ IN CARD VISIT (NAMECARD)
+                </div>
+                <div style="padding: 15px 20px 5px; font-size: 0.88rem; color: var(--text-muted);">
+                    💡 Giấy Couches 300gsm, cán mờ 2 mặt đóng vỏ hộp cứng sang trọng. Thời gian lấy ngay trong ngày tại Hà Nội! Card bo góc thường thêm 5k/hộp, bo góc ATM thêm 20k/hộp.
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Số lượng (Hộp / Nội dung)</th>
+                                <th>Cán mờ 2 mặt</th>
+                                <th>Không cán mờ</th>
+                                <th>Giấy Mỹ Thuật (Kem, sần, ngọc trai)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1 - 8 hộp</strong></td><td class="price-highlight">60.000đ</td><td>45.000đ</td><td>75.000đ</td></tr>
+                            <tr><td><strong>9 - 15 hộp</strong></td><td class="price-highlight">55.000đ</td><td>43.000đ</td><td>70.000đ</td></tr>
+                            <tr><td><strong>16 - 20 hộp</strong></td><td class="price-highlight">50.000đ</td><td>40.000đ</td><td>65.000đ</td></tr>
+                            <tr><td><strong>21 - 50 hộp</strong></td><td class="price-highlight">48.000đ</td><td>35.000đ</td><td>60.000đ</td></tr>
+                            <tr><td><strong>50 - 100 hộp</strong></td><td class="price-highlight">45.000đ</td><td>32.000đ</td><td>57.000đ</td></tr>
+                            <tr><td><strong>> 100 hộp</strong></td><td class="price-highlight">43.000đ</td><td>30.000đ</td><td>55.000đ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 6. BẢNG QUY ĐỔI KÍCH THƯỚC -->
+            <div class="price-table-card">
+                <div class="price-table-header" style="background: linear-gradient(135deg, #0284c7, #0369a1);">
+                    <span>📐</span> BẢNG QUY ĐỔI KÍCH THƯỚC KHỔ IN
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Kích thước 1 chiều (cm)</th>
+                                <th>Quy đổi (Tính giá bảng A4)</th>
+                                <th>Số lượng (trang)</th>
+                                <th>Kích thước chuẩn (cm)</th>
+                                <th>Quy đổi (Số trang A4)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>> 33 đến < 43</td><td>2 trang</td><td>100</td><td>22 x 33</td><td>200 trang</td></tr>
+                            <tr><td>> 43 đến < 48</td><td>2.5 trang</td><td>100</td><td>33 x 48</td><td>250 trang</td></tr>
+                            <tr><td>> 48 đến < 55</td><td>3 trang</td><td>100</td><td>27 x 55</td><td>300 trang</td></tr>
+                            <tr><td>> 55 đến < 76</td><td>5 trang</td><td>100</td><td>22 x 70</td><td>500 trang</td></tr>
+                            <tr><td>> 76 đến < 100</td><td>6 trang</td><td>100</td><td>32.5 x 100</td><td>600 trang</td></tr>
+                            <tr><td>> 100 đến < 130</td><td>7 trang</td><td>100</td><td>32.5 x 130</td><td>700 trang</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="padding: 10px 20px; font-size: 0.82rem; color: var(--text-muted); font-style: italic;">
+                    * Kích thước nhỏ nhất: 9.8 x 14.6 cm | Lớn nhất: 33 x 130 cm.
+                </div>
+            </div>
+
+            <!-- 7. BẢNG GIÁ CÁN MÀNG & NHỰA TỔNG HỢP -->
+            <div class="price-table-card">
+                <div class="price-table-header" style="background: linear-gradient(135deg, #0d9488, #0f766e);">
+                    <span>🛡️</span> BẢNG GIÁ CÁN MÀNG & NHỰA TỔNG HỢP
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Loại Cán Màng</th>
+                                <th>A4 (đ/tờ)</th>
+                                <th>A3 (đ/tờ)</th>
+                                <th>Loại Nhựa Tổng Hợp</th>
+                                <th>Định lượng</th>
+                                <th>Giá Hộp (đ)</th>
+                                <th>Giá Tờ A4 (đ)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cán nhiệt 1 mặt</td><td>1.000đ</td><td>2.000đ</td><td>Nhựa trắng</td><td>385gr</td><td>275.000đ</td><td>35.000đ (sll 30.000)</td></tr>
+                            <tr><td>Cán nhiệt 2 mặt</td><td>1.500đ</td><td>3.000đ</td><td>Nhựa trắng</td><td>490gr</td><td>350.000đ</td><td>40.000đ (sll 35.000)</td></tr>
+                            <tr><td>Cán nguội 1 mặt</td><td>2.000đ</td><td>4.000đ</td><td>Nhựa trong mờ</td><td>175gr</td><td>180.000đ</td><td>20.000đ (sll 18.000)</td></tr>
+                            <tr><td>Cán nguội 2 mặt</td><td>3.000đ</td><td>6.000đ</td><td>Nhựa trong mờ</td><td>280gr</td><td>280.000đ</td><td>25.000đ (sll 20.000)</td></tr>
+                            <tr><td>-</td><td>-</td><td>-</td><td>Nhựa trong suốt</td><td>250gr</td><td>300.000đ</td><td>35.000đ (sll 30.000)</td></tr>
+                            <tr><td>-</td><td>-</td><td>-</td><td>Nhựa hạng bạc</td><td>280gr</td><td>300.000đ</td><td>35.000đ (sll 30.000)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- BẢNG GIÁ NHỰA TỔNG HỢP -->
+            <div class="price-table-card">
+                <div class="price-table-header" style="background: linear-gradient(135deg, #0284c7, #0369a1);">
+                    <span>🧪</span> BẢNG GIÁ NHỰA TỔNG HỢP
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Loại Nhựa</th>
+                                <th>Định Lượng</th>
+                                <th>Giá Hộp (đồng)</th>
+                                <th>Giá Tờ (đồng/tờ A4)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Nhựa trắng</strong></td>
+                                <td>385gr</td>
+                                <td>275.000đ</td>
+                                <td class="price-highlight">35.000đ <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(trong nhiều 30.000đ/tờ)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nhựa trắng</strong></td>
+                                <td>490gr</td>
+                                <td>350.000đ</td>
+                                <td class="price-highlight">40.000đ <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(trong nhiều 35.000đ/tờ)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nhựa trong mờ</strong></td>
+                                <td>175gr</td>
+                                <td>180.000đ</td>
+                                <td class="price-highlight">20.000đ <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(trong nhiều 18.000đ/tờ)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nhựa trong mờ</strong></td>
+                                <td>280gr</td>
+                                <td>280.000đ</td>
+                                <td class="price-highlight">25.000đ <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(trong nhiều 20.000đ/tờ)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nhựa trong suốt</strong></td>
+                                <td>250gr</td>
+                                <td>300.000đ</td>
+                                <td class="price-highlight">35.000đ <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(trong nhiều 30.000đ/tờ)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nhựa hạng bạc</strong></td>
+                                <td>280gr</td>
+                                <td>300.000đ</td>
+                                <td class="price-highlight">35.000đ <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(trong nhiều 30.000đ/tờ)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 8. BẢNG GIÁ DECAL CẮT BẾ A3 -->
+            <div class="price-table-card">
+                <div class="price-table-header" style="background: linear-gradient(135deg, #34c759, #30d158);">
+                    <span>🏷️</span> BẢNG GIÁ DECAL CẮT BẾ SIZE A3 (28x38cm / 28x43cm)
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Số lượng (Tờ)</th>
+                                <th>Decal Giấy (Không cán)</th>
+                                <th>Decal Giấy (Cán mờ/bóng)</th>
+                                <th>Decal Nhựa</th>
+                                <th>Decal 7 màu</th>
+                                <th>Decal Nhũ Bạc</th>
+                                <th>Decal Trong</th>
+                                <th>Tem Vỡ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1 - 5</strong></td><td>20.000đ</td><td>25.000đ</td><td>30.000đ</td><td>33.000đ</td><td>31.000đ</td><td>31.000đ</td><td>40.000đ</td></tr>
+                            <tr><td><strong>6 - 10</strong></td><td>18.000đ</td><td>21.000đ</td><td>25.000đ</td><td>30.000đ</td><td>28.000đ</td><td>28.000đ</td><td>38.000đ</td></tr>
+                            <tr><td><strong>11 - 15</strong></td><td>15.000đ</td><td>18.000đ</td><td>22.000đ</td><td>27.000đ</td><td>24.000đ</td><td>24.000đ</td><td>35.000đ</td></tr>
+                            <tr><td><strong>16 - 20</strong></td><td>12.000đ</td><td>15.000đ</td><td>18.000đ</td><td>23.000đ</td><td>21.000đ</td><td>20.000đ</td><td>32.000đ</td></tr>
+                            <tr><td><strong>21 - 80</strong></td><td>10.000đ</td><td>13.000đ</td><td>15.000đ</td><td>21.000đ</td><td>19.000đ</td><td>19.000đ</td><td>30.000đ</td></tr>
+                            <tr><td><strong>81 - 500</strong></td><td>8.000đ</td><td>11.000đ</td><td>13.000đ</td><td>19.000đ</td><td>17.000đ</td><td>17.000đ</td><td>28.000đ</td></tr>
+                            <tr><td><strong>501 - 1000</strong></td><td>7.000đ</td><td>10.000đ</td><td>12.000đ</td><td>18.000đ</td><td>15.000đ</td><td>15.000đ</td><td>25.000đ</td></tr>
+                            <tr><td><strong>> 1001</strong></td><td>6.000đ</td><td>9.000đ</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 9. BẢNG GIÁ IN KẸP FILE & PHONG BÌ -->
+            <div class="price-table-card">
+                <div class="price-table-header">
+                    <span>📁</span> BẢNG GIÁ IN KẸP FILE & PHONG BÌ
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Số lượng</th>
+                                <th>Kẹp File A4</th>
+                                <th>Phong Bì A6 (22x12cm)</th>
+                                <th>Phong Bì A5 (16x23cm)</th>
+                                <th>Phong Bì A4 (22x30cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1 - 10</strong></td><td class="price-highlight">35.000đ</td><td>5.000đ</td><td>7.000đ</td><td>8.000đ</td></tr>
+                            <tr><td><strong>11 - 50</strong></td><td class="price-highlight">25.000đ</td><td>3.500đ</td><td>4.000đ</td><td>5.000đ</td></tr>
+                            <tr><td><strong>51 - 100</strong></td><td class="price-highlight">20.000đ</td><td>2.500đ</td><td>3.000đ</td><td>3.500đ</td></tr>
+                            <tr><td><strong>101 - 200</strong></td><td class="price-highlight">18.000đ</td><td>1.700đ</td><td>2.000đ</td><td>3.300đ</td></tr>
+                            <tr><td><strong>201 - 999</strong></td><td class="price-highlight">17.000đ</td><td>L/h giá tốt</td><td>L/h giá tốt</td><td>L/h giá tốt</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="padding: 10px 20px; font-size: 0.85rem; color: var(--text-muted);">
+                    💡 In hóa đơn các bon, túi giấy, hộp nhũ các loại... Vui lòng liên hệ trực tiếp Call / Zalo để được tư vấn báo giá rẻ nhất!
+                </div>
+            </div>
+
+            <!-- 10. BẢNG GIÁ GIA CÔNG SAU IN & ÉP PLASTIC -->
+            <div class="price-table-card">
+                <div class="price-table-header" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+                    <span>⚙️</span> BẢNG GIÁ GIA CÔNG SAU IN & ÉP PLASTIC
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-glass-table">
+                        <thead>
+                            <tr>
+                                <th>Dịch vụ gia công</th>
+                                <th>Đơn giá chi tiết</th>
+                                <th>Số lượng Ép Plastic</th>
+                                <th>Ép Plastic A4</th>
+                                <th>Ép Plastic A5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cắt xén A4 / A5 / A6</td><td>100đ/tờ (A4), A5-A6 từ 200đ/tờ</td><td>1 - 10 tờ</td><td>5.000đ</td><td>2.500đ</td></tr>
+                            <tr><td>Đục lỗ, bo tròn góc</td><td>500đ/tờ</td><td>11 - 80 tờ</td><td>4.500đ</td><td>2.300đ</td></tr>
+                            <tr><td>Ghim quyển / Ghim 1 góc</td><td>1.000đ - 2.000đ/quyển</td><td>81 - 100 tờ</td><td>4.000đ</td><td>2.300đ</td></tr>
+                            <tr><td>Đóng keo lẻ</td><td>45.000đ/quyển (SLL giảm dần)</td><td>> 100 tờ</td><td>3.500đ</td><td>2.300đ</td></tr>
+                            <tr><td>Đóng gáy xoắn / Ghim dính mica</td><td>15.000đ/quyển (>50q: 13k, >200q: 12k)</td><td>-</td><td>-</td><td>-</td></tr>
+                            <tr><td>Cắt bế CNC định hình</td><td>3.000đ/A4 - 5.000đ/A3</td><td>-</td><td>-</td><td>-</td></tr>
+                            <tr><td>Cán mờ nhiệt 1 mặt/2 mặt</td><td>1.500đ/A4 - 3.000đ/A3</td><td>-</td><td>-</td><td>-</td></tr>
+                            <tr><td>Số nhảy / Bế xé răng cưa</td><td>1.000đ/tờ (>200 tờ: 500đ)</td><td>-</td><td>-</td><td>-</td></tr>
+                            <tr><td>Đóng quyển lịch bàn A5</td><td>30.000đ/quyển (>100q: 20k)</td><td>-</td><td>-</td><td>-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- NÚT TẢI FILE BÁO GIÁ PDF -->
+            <div style="text-align: center; margin: 35px 0;">
+                <div class="neon-wrapper" style="display: inline-block;">
+                    <div class="neon-ring"></div>
+                    <a href="download/dl.pdf" target="_blank" class="ios-submit-btn btn-red" style="padding: 0 35px; height: 48px; font-size: 1rem; text-decoration: none;">
+                        📥 TẢI FILE BÁO GIÁ ĐẦY ĐỦ (PDF)
+                    </a>
+                </div>
+            </div>
+
+            <!-- CAPSULE LIÊN HỆ BÁO GIÁ IN MẪU RIÊNG -->
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; padding: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">LIÊN HỆ BÁO GIÁ IN MẪU RIÊNG</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); font-style: italic; margin-bottom: 20px;">In Tam Tân hỗ trợ kiểm tra file in và tư vấn quy cách tối ưu chi phí hoàn toàn miễn phí!</p>
                 
-            </select>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <div class="neon-wrapper">
+                        <div class="neon-ring"></div>
+                        <a href="tel:0904370010" class="ios-submit-btn btn-blue" style="padding: 0 24px; text-decoration: none; height: 42px; font-size: 0.9rem;">
+                            📞 0904.370.010 (Zalo Hoàn)
+                        </a>
+                    </div>
 
-            <label for="can-mo" style="display: block; margin-bottom: 10px;">Cán mờ:</label>
-            <select id="can-mo" style="display: block; width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                <option value="khong">Không cán mờ</option>
-                <option value="co">Cán mờ</option>
-            </select>
-
-            <label for="in-mot-hai-mat" style="display: block; margin-bottom: 10px;">In một mặt/hai mặt:</label>
-            <select id="in-mot-hai-mat" style="display: block; width: 100%; padding: 8px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ddd;">
-                <option value="mot-mat">Một mặt</option>
-                <option value="hai-mat">Hai mặt</option>
-            </select>
-
-            <label for="khong-co-gia-cong" style="display: block; margin-bottom: 10px;">Gia công:</label>
-            <select id="khong-co-gia-cong" style="display: block; width: 100%; padding: 8px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ddd;">
-                <option value="khong-gia-cong">Không gia công</option>
-                <option value="cat-be-gan">Cắt bế gân</option>
-            </select>
-
-            <button id="tinh-gia-button" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Tính giá</button>
-
-            <p id="ket-qua" style="font-size: 18px; text-align: center; font-weight: bold; margin-top: 20px;">Tổng giá tiền: </p>
-
-            <hr style="margin: 20px 0;">
-
-            <h3 style="text-align: center;">Thông tin liên hệ</h3>
-            <p style="text-align: center;">Điện thoại (Zalo): <a href="tel:0904370010" style="color: #4CAF50;">0904370010 - Hoàn</a></p>
-
-            <div style="text-align: center;">
-                <p> Số tài khoản cá nhân:</p>
-                <p>TRAN QUOC HOAN - Vietcombank: 0021000773177</p>
-                <p> Chuyển khoản qua VietQR</p>
-
-                <img id="qr-code-image" src="" alt="QR Code" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 10px;">
-            </div>
-        </div>
-
-        <div id="phieu-thu">
-            <div id="phieu-thu-container">
-                <div class="logo">
-                    <img src="img/logo-01.svg" alt="Logo Tam Tan">
-                </div>
-                <p>Công ty TNHH Tam Tân</p>
-                <p>CS2: Số 10, ngách 5, ngõ 360 Đê La Thành, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
-                <h2>Phiếu Thu</h2>
-                <p>Mã số: <span id="phieu-thu-ma-so"></span></p>
-                <p>Tên khách hàng: <span id="phieu-thu-ten-khach-hang"></span></p>
-                <p>Địa chỉ: <span id="phieu-thu-dia-chi"></span></p>
-                <table id="phieu-thu-bang">
-                    <tr>
-                        <th>Tên hàng</th>
-                        <th>Số lượng</th>
-                        <th>Đơn giá</th>
-                        <th>Thành tiền</th>
-                    </tr>
-                </table>
-                <p>Tổng số tiền: <span id="phieu-thu-tong-gia"></span></p>
-                <p>Thành tiền (viết bằng chữ): <span id="phieu-thu-tong-tien-chu"></span></p>
-                <p>Đại diện cửa hàng: <span id="phieu-thu-dai-dien"></span></p>
-                <p>Ngày: <span id="phieu-thu-ngay"></span></p>
-                <div class="qr-code">
-                    <img id="qr-code-image-in" src="" alt="QR Code" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 10px;">
+                    <div class="neon-wrapper">
+                        <div class="neon-ring"></div>
+                        <a href="mailto:intamtan.net@gmail.com" class="ios-submit-btn btn-white" style="padding: 0 24px; text-decoration: none; height: 42px; font-size: 0.9rem;">
+                            ✉️ intamtan.net@gmail.com
+                        </a>
+                    </div>
                 </div>
             </div>
+
+        </section>
+
+        <!-- BẢN ĐỒ CỬA HÀNG -->
+        <section class="map-section">
+            <div class="footer-map">
+                <h3>BẢN ĐỒ VỊ TRÍ</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7448.487390100704!2d105.823365!3d21.022933!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab7745909f35%3A0x57fc5e42dc387660!2sIn%20Tam%20T%C3%A2n!5e0!3m2!1svi!2sus!4v1745381312355!5m2!1svi!2sus"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER & PHẢN HỒI EMAIL ĐỒNG BỘ NEON -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-grid">
+                
+                <!-- Cột 1: Thông tin địa chỉ -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <img src="images/logo3-01.svg" alt="In Tam Tân Logo" class="logo-img" onerror="this.style.display='none'">
+                        <span>IN TAM TÂN</span>
+                    </div>
+                    <p class="footer-desc">
+                        In Tam Tân chuyên in UV, in offset, in decal, card visit, với giá tốt nhất tại Hà Nội. Máy in hiện đại, gia công chuyên nghiệp, bảo hành uy tín.
+                    </p>
+                    <div class="contact-info-list">
+                        <div class="info-item">
+                            <span class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+                            <span><b>Địa chỉ:</b> Số 10, ngách 5, ngõ 360 Đê La Thành, Đống Đa, Hà Nội</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+                            <span><b>Hotline / Zalo:</b> <a href="tel:0904370010" class="link-gold">0904.370.010</a></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+                            <span><b>Email:</b> <a href="mailto:intamtan.net@gmail.com" class="link-main">intamtan.net@gmail.com</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột 2: Form phản hồi CÓ NEON RING SPIN -->
+                <div class="footer-col feedback-col">
+                    <h3 class="footer-col-title">YÊU CẦU BÁO GIÁ & PHẢN HỒI</h3>
+                    <p class="feedback-sub">Quý khách cần báo giá in ấn riêng hoặc gửi file thiết kế, vui lòng điền thông tin tin nhắn tại đây:</p>
+                    
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="form-group-ios">
+                            <div class="neon-wrapper neon-input-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box">
+                                    <input type="text" id="fbName" placeholder="Họ và tên khách hàng *" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-ios">
+                            <div class="neon-wrapper neon-input-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box">
+                                    <input type="email" id="fbEmail" placeholder="Email nhận phản hồi *" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-ios">
+                            <div class="neon-wrapper neon-input-wrapper textarea-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box ios-textarea-box">
+                                    <textarea id="fbMessage" rows="3" placeholder="Nhập quy cách in, kích thước, số lượng hoặc thắc mắc của bạn..." required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="neon-wrapper full-width-btn mt-10">
+                            <div class="neon-ring"></div>
+                            <button type="submit" class="ios-submit-btn btn-red">
+                                GỬI PHẢN HỒI QUA EMAIL
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Chân trang Copyright -->
+            <div class="footer-bottom">
+                <p>© 2026 In Tam Tân. All rights reserved. Design By Quyết</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- NÚT TRỜ VỀ ĐẦU TRANG - GÓC TRÁI -->
+    <div class="float-top-left-container">
+        <div class="neon-wrapper">
+            <div class="neon-ring"></div>
+            <button id="backToTopBtn" class="float-top-left" title="Trở về đầu trang">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- FLOATING CONTACTS - GÓC PHẢI -->
+    <div class="floating-contacts">
+        <!-- Zalo App Icon -->
+        <div class="neon-wrapper float-btn-wrapper">
+            <div class="neon-ring"></div>
+            <a href="https://zalo.me/0904370010" target="_blank" class="float-btn float-zalo" data-tooltip="Chat Zalo Tam Tân">
+                <svg width="26" height="26" viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 11.83 4 21.48C4 26.68 6.84 31.33 11.31 34.5L9.36 41.87C9.17 42.59 9.87 43.19 10.54 42.86L18.8 38.75C20.46 39.27 22.2 39.54 24 39.54C35.05 39.54 44 31.71 44 22.06C44 12.41 35.05 4 24 4Z" fill="#0068FF"/></svg>
+            </a>
         </div>
 
-        <div class="print-only">
-            <div id="phieu-thu-container-print">
-                <div class="logo">
-                    <img src="img/logo-01.svg" alt="Logo Tam Tan">
+        <!-- Facebook App Icon -->
+        <div class="neon-wrapper float-btn-wrapper">
+            <div class="neon-ring"></div>
+            <a href="https://www.facebook.com/people/Tam-T%C3%A2n/pfbid0LH7CfFkQY1qFcGN2MNiKVdncYYRv7hfg1mVUJZF1rzezJEdjAkXVdCo1fa4TpwdLl/" target="_blank" class="float-btn float-fb" data-tooltip="Ghé thăm Fanpage">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+        </div>
+
+        <!-- Phone Icon -->
+        <div class="neon-wrapper float-btn-wrapper">
+            <div class="neon-ring"></div>
+            <a href="tel:0904370010" class="float-btn float-phone" data-tooltip="Gọi Hotline 0904.370.010">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAL REVIEW CHI TIẾT SẢN PHẨM / DỊCH VỤ IN -->
+    <div class="modal-overlay" id="productDetailModal">
+        <div class="neon-wrapper modal-neon-box detail-modal-wrapper always-active">
+            <div class="neon-ring"></div>
+            
+            <div class="ios-modal product-detail-card">
+                <div class="close-ios" id="closeDetailModal">✕</div>
+
+                <!-- CỘT TRÁI: HÌNH ẢNH MẪU THỰC TẾ -->
+                <div class="detail-img-col">
+                    <img id="detailMainImg" src="images/item8.jpg" alt="Mẫu In Tam Tân">
                 </div>
-                <p>Công ty TNHH Tam Tân</p>
-                <p>CS2: Số 10, ngách 5, ngõ 360 Đê La Thành, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
-                <h2>Phiếu Thu</h2>
-                <p>Mã số: <span id="phieu-thu-ma-so-in"></span></p>
-                <p>Tên khách hàng: <span id="phieu-thu-ten-khach-hang-in"></span></p>
-                <p>Địa chỉ: <span id="phieu-thu-dia-chi-in"></span></p>
-                <table id="phieu-thu-bang-in">
-                    <tr>
-                        <th>Tên hàng</th>
-                        <th>Số lượng</th>
-                        <th>Đơn giá</th>
-                        <th>Thành tiền</th>
-                    </tr>
-                </table>
-                <p>Tổng số tiền: <span id="phieu-thu-tong-gia-in"></span></p>
-                <p>Thành tiền (viết bằng chữ): <span id="phieu-thu-tong-tien-chu-in"></span></p>
-                <p>Đại diện cửa hàng: <span id="phieu-thu-dai-dien-in"></span></p>
-                <p>Ngày: <span id="phieu-thu-ngay-in"></span></p>
-                <div class="qr-code">
-                    <img id="qr-code-image-print" src="" alt="QR Code" style="width: 150px; height: 150px; border: 1px solid #ddd; border-radius: 10px;">
+
+                <!-- CỘT PHẢI: THÔNG TIN CHI TIẾT & BÁO GIÁ -->
+                <div class="detail-info-col">
+                    <div class="detail-badge">✨ CHI TIẾT DỊCH VỤ IN</div>
+                    <h2 id="detailTitle">Giá Cuốn Tam Tân</h2>
+                    <p id="detailDesc" class="detail-description">
+                        Khung nhôm hợp kim chắc chắn, dễ dàng cuốn gọn khi di chuyển, dùng hiển thị poster sự kiện, hội thảo chuyên nghiệp.
+                    </p>
+
+                    <!-- ĐẶC ĐIỂM KỸ THUẬT VẮT TẮT -->
+                    <div class="detail-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Chất liệu:</span>
+                            <span id="specMaterial" class="spec-val">Nhôm hợp kim cao cấp / Decal PP</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Kích thước:</span>
+                            <span id="specSize" class="spec-val">60x160cm / 80x200cm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Thời gian:</span>
+                            <span id="specTime" class="spec-val">Lấy ngay trong ngày</span>
+                        </div>
+                    </div>
+
+                    <!-- CHÂN MODAL & NÚT ĐẶT IN -->
+                    <div class="detail-footer">
+                        <div class="brand-tag">🖨️ In Tam Tân</div>
+                        <div class="neon-wrapper">
+                            <div class="neon-ring"></div>
+                            <a id="detailOrderBtn" href="https://zalo.me/0904370010" target="_blank" class="ios-submit-btn btn-blue detail-btn">
+                                Đặt In Ngay
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- MODAL VIDEO -->
+    <div class="modal-overlay" id="videoModal">
+        <div class="video-modal-card">
+            <span class="close-ios" id="closeVideoModal">✕</span>
+            <div class="ratio ratio-16x9">
+                <iframe id="videoIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL TÀI KHOẢN DUAL-PANEL CHUẨN MẪU (BỌC KHUNG NEON RING XOAY 360) -->
+    <div class="modal-overlay" id="authModal">
+        <div class="neon-wrapper modal-neon-box always-active">
+            <div class="neon-ring"></div>
+            
+            <div class="ios-modal auth-dual-container" id="authDualContainer">
+                <div class="close-ios" id="closeAuthModal">✕</div>
+
+                <!-- CỘT TRÁI: ĐĂNG NHẬP -->
+                <div class="auth-panel auth-login-panel">
+                    <div class="panel-header">
+                        <span class="sub-label">CHÀO MỪNG BẠN TRỞ LẠI</span>
+                        <h2>Đăng Nhập</h2>
+                        <p>Hệ thống hóa đơn nội bộ Tam Tân</p>
+                    </div>
+
+                    <!-- Tra cứu hóa đơn -->
+                    <div class="neon-wrapper full-width-btn mb-12">
+                        <div class="neon-ring"></div>
+                        <a href="hoadonintamtan.html" class="ios-submit-btn btn-green">
+                            🧾 TRA CỨU HOÁ ĐƠN TAM TÂN
+                        </a>
+                    </div>
+
+                    <form id="authLoginForm" onsubmit="return false;">
+                        <div class="form-group-ios">
+                            <label>Email tài khoản</label>
+                            <div class="neon-wrapper neon-input-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box">
+                                    <input type="email" id="authEmail" placeholder="name@domain.com" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-ios">
+                            <label>Mật khẩu</label>
+                            <div class="neon-wrapper neon-input-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box">
+                                    <input type="password" id="authPassword" placeholder="••••••••" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="auth-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="rememberMe">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" id="forgotPasswordBtn" class="forgot-link">Quên Mật Khẩu?</a>
+                        </div>
+
+                        <div class="neon-wrapper full-width-btn mb-12">
+                            <div class="neon-ring"></div>
+                            <button type="submit" id="submitAuthBtn" class="ios-submit-btn btn-blue">
+                                Đăng Nhập
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="divider"><span>Hoặc đăng nhập nhanh</span></div>
+
+                    <!-- Google Auth -->
+                    <div class="neon-wrapper full-width-btn">
+                        <div class="neon-ring"></div>
+                        <button class="ios-submit-btn btn-white" id="googleAuthBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                            Tiếp tục với Google
+                        </button>
+                    </div>
+
+                    <!-- Chuyển sang Đăng ký trên Mobile -->
+                    <div class="switch-mobile-view">
+                        Chưa có tài khoản? <a href="#" id="switchToRegisterMobile">Đăng ký ngay</a>
+                    </div>
+                </div>
+
+                <!-- CỘT PHẢI: ĐĂNG KÝ -->
+                <div class="auth-panel auth-register-panel">
+                    <div class="panel-header">
+                        <span class="sub-label">ĐĂNG KÝ</span>
+                        <h2>Đăng ký mới</h2>
+                        <p>Tạo tài khoản quản lý yêu cầu VAT</p>
+                    </div>
+
+                    <form id="authRegisterForm" onsubmit="return false;">
+                        <div class="form-group-ios">
+                            <label>Họ và Tên</label>
+                            <div class="neon-wrapper neon-input-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box">
+                                    <input type="text" id="regName" placeholder="intamtan" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-ios">
+                            <label>Số Zalo</label>
+                            <div class="neon-wrapper neon-input-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box">
+                                    <input type="tel" id="regPhone" placeholder="09xxxxxxx" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-ios">
+                            <label>Email đăng ký</label>
+                            <div class="neon-wrapper neon-input-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box">
+                                    <input type="email" id="regEmail" placeholder="abc@gmail.com" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-ios">
+                            <label>Mật khẩu</label>
+                            <div class="neon-wrapper neon-input-wrapper">
+                                <div class="neon-ring"></div>
+                                <div class="ios-input-box">
+                                    <input type="password" id="regPassword" placeholder="Tối thiểu 6 ký tự" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="neon-wrapper full-width-btn mt-10">
+                            <div class="neon-ring"></div>
+                            <button type="submit" id="submitRegBtn" class="ios-submit-btn btn-blue">
+                                Đăng Ký
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Chuyển sang Đăng nhập trên Mobile -->
+                    <div class="switch-mobile-view">
+                        Đã có tài khoản? <a href="#" id="switchToLoginMobile">Đăng nhập</a>
+                    </div>
+                </div>
+
+                <!-- BANNER TRUỢT CHUYỂN ĐỔI CHUNG CẢ HAI CỘT -->
+                <div class="auth-overlay-container">
+                    <div class="auth-overlay-panel overlay-left">
+                        <h2>Đã có tài khoản?</h2>
+                        <p>Đăng nhập để kiểm tra tình trạng xuất hóa đơn đỏ của bạn.</p>
+                        <div class="neon-wrapper">
+                            <div class="neon-ring"></div>
+                            <button class="ios-submit-btn btn-outline" id="switchToLogin">Đăng Nhập</button>
+                        </div>
+                    </div>
+
+                    <div class="auth-overlay-panel overlay-right">
+                        <h2>Tạo tài khoản mới?</h2>
+                        <p>Đăng ký tài khoản để dễ dàng đặt in và tra cứu lịch sử hóa đơn.</p>
+                        <div class="neon-wrapper">
+                            <div class="neon-ring"></div>
+                            <button class="ios-submit-btn btn-outline" id="switchToRegister">Đăng Ký</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT TÍNH GIÁ IN TỰ ĐỘNG GIỮ NGUYÊN TÍNH NĂNG & THUẬT TOÁN 100% -->
     <script>
         document.getElementById("tinh-gia-button").addEventListener("click", function () {
-            const soLuongTo = parseInt(document.getElementById("so-luong-to").value);
+            const soLuongTo = parseInt(document.getElementById("so-luong-to").value) || 0;
             const loaiGiay = document.getElementById("loai-giay").value;
             const loaiGiayCuThe = document.getElementById("loai-giay-cu-the").value;
             const kichThuocGiay = document.getElementById("kich-thuoc-giay").value;
             const canMo = document.getElementById("can-mo").value;
             const inMotHaiMat = document.getElementById("in-mot-hai-mat").value;
-            const khongCoGiaCong = document.getElementById("khong-co-gia-cong").value; // Lấy giá trị của select box gia công
+            const khongCoGiaCong = document.getElementById("khong-co-gia-cong").value;
 
             // Bảng giá in cho các kích thước giấy
             const bangGiaA4 = [
@@ -593,70 +1280,38 @@
                 "Decan Giấy": { "A4": 1000, "A3": 2000, "A5": 750 }
             };
 
-            // Bảng giá cán mờ
-            const bangGiaCan = {
-                "A4": 1500,
-                "A3": 3000,
-                "A5": 1000
-            };
-            // Bảng giá Cắt bế gân (giá trên mỗi tờ)
-            const bangGiaCatBeGan = {
-                "A4": 200,
-                "A3": 400,
-                "A5": 300
-            };
+            const bangGiaCan = { "A4": 1500, "A3": 3000, "A5": 1000 };
+            const bangGiaCatBeGan = { "A4": 200, "A3": 400, "A5": 300 };
 
             let giaTienIn = 0;
-            let soLuongTrangIn = 0; // Số trang in thực tế
+            let soLuongTrangIn = 0;
 
-            // Xử lý số lượng trang in
             if (inMotHaiMat === "mot-mat") {
-                if (kichThuocGiay === "A3") {
-                    soLuongTrangIn = soLuongTo * 2; // In 2 trang trên 1 mặt A3
-                } else {
-                    soLuongTrangIn = soLuongTo; // In 1 trang trên 1 mặt giấy khác A3 (A4, A5, ...)
-                }
+                soLuongTrangIn = (kichThuocGiay === "A3") ? soLuongTo * 2 : soLuongTo;
             } else if (inMotHaiMat === "hai-mat") {
-                soLuongTrangIn = soLuongTo * 2; // In 2 mặt, số trang = 2 lần số lượng tờ (áp dụng cho tất cả các khổ giấy)
-                if (kichThuocGiay === "A3") {
-                    soLuongTrangIn = soLuongTo * 4; // Nếu là A3 in 2 mặt thì gấp 4
-                }
+                soLuongTrangIn = (kichThuocGiay === "A3") ? soLuongTo * 4 : soLuongTo * 2;
             }
 
-            // Lựa chọn bảng giá in theo kích thước giấy
             let bangGiaIn = bangGiaA4;
-            if (kichThuocGiay === "A5") {
-                bangGiaIn = bangGiaA5;
-            } else if (kichThuocGiay === "A3") {
-                bangGiaIn = bangGiaA3;
-            }
+            if (kichThuocGiay === "A5") bangGiaIn = bangGiaA5;
+            else if (kichThuocGiay === "A3") bangGiaIn = bangGiaA3;
 
-            // Tính giá in
             for (const khoang of bangGiaIn) {
                 if (soLuongTrangIn >= khoang[0] && soLuongTrangIn <= khoang[1]) {
                     giaTienIn = khoang[2];
                     break;
                 }
             }
-            // Xử lý trường hợp số lượng trang in vượt quá giới hạn
-            if (giaTienIn === 0) {
-                giaTienIn = bangGiaIn[bangGiaIn.length - 1][2];
-            }
+            if (giaTienIn === 0) giaTienIn = bangGiaIn[bangGiaIn.length - 1][2];
 
-            // Tính giá giấy
             let giaTienGiay = bangGiaGiay[loaiGiayCuThe][kichThuocGiay];
-            let giaTienCanMo = canMo === "co" ? bangGiaCan[kichThuocGiay] : 0;
-            let giaTiencatBeGan = 0;
-            if (khongCoGiaCong === "cat-be-gan") {
-                giaTiencatBeGan = bangGiaCatBeGan[kichThuocGiay] || 0;
-            }
+            let giaTienCanMo = (canMo === "co") ? bangGiaCan[kichThuocGiay] : 0;
+            let giaTiencatBeGan = (khongCoGiaCong === "cat-be-gan") ? bangGiaCatBeGan[kichThuocGiay] : 0;
 
-            // Tính tổng chi phí
-            let giaTienGiayTong = giaTienGiay * soLuongTo; // Giá giấy = giá mỗi tờ * số lượng tờ
-            let giaTienCanMoTong = giaTienCanMo * soLuongTo; // Giá cán mờ = giá mỗi tờ * số lượng tờ
-            let giaTiencatBeGanTong = giaTiencatBeGan * soLuongTo; // Giá cắt bế gân = giá mỗi tờ * số lượng tờ
+            let giaTienGiayTong = giaTienGiay * soLuongTo;
+            let giaTienCanMoTong = giaTienCanMo * soLuongTo;
+            let giaTiencatBeGanTong = giaTiencatBeGan * soLuongTo;
 
-            // Tính giá in theo mặt
             let giaTienInTong = giaTienIn * soLuongTo;
             if (inMotHaiMat === "hai-mat") {
                 giaTienInTong = giaTienIn * soLuongTo * 2;
@@ -665,1090 +1320,95 @@
             const ketQua = giaTienInTong + giaTienGiayTong + giaTienCanMoTong + giaTiencatBeGanTong;
             document.getElementById("ket-qua").textContent = "Tổng giá tiền: " + ketQua.toLocaleString('vi-VN') + " đồng";
 
-            // Hiển thị phiếu thu
-            document.getElementById("phieu-thu-ma-so").textContent = "";
-            document.getElementById("phieu-thu-ten-khach-hang").textContent = "";
-            document.getElementById("phieu-thu-dia-chi").textContent = "";
-
-            // Xóa các hàng cũ trong bảng phiếu thu
+            // HIỂN THỊ PHIẾU THU BÁO GIÁ
             const bangPhieuThu = document.getElementById("phieu-thu-bang");
             while (bangPhieuThu.rows.length > 1) {
                 bangPhieuThu.deleteRow(1);
             }
 
-            // Thêm hàng in vào bảng phiếu thu
             const hangIn = bangPhieuThu.insertRow();
-            hangIn.insertCell(0).textContent = kichThuocGiay;
+            hangIn.insertCell(0).textContent = "In Laser " + kichThuocGiay;
             hangIn.insertCell(1).textContent = soLuongTo;
-            hangIn.insertCell(2).textContent = (giaTienInTong / soLuongTo).toLocaleString('vi-VN') + " đồng";
-            hangIn.insertCell(3).textContent = giaTienInTong.toLocaleString('vi-VN') + " đồng";
+            hangIn.insertCell(2).textContent = (giaTienInTong / soLuongTo).toLocaleString('vi-VN') + "đ";
+            hangIn.insertCell(3).textContent = giaTienInTong.toLocaleString('vi-VN') + "đ";
 
-            // Thêm hàng giấy vào bảng phiếu thu
             const hangGiay = bangPhieuThu.insertRow();
             hangGiay.insertCell(0).textContent = "Giấy " + loaiGiayCuThe;
             hangGiay.insertCell(1).textContent = soLuongTo;
-            hangGiay.insertCell(2).textContent = giaTienGiay.toLocaleString('vi-VN') + " đồng";
-            hangGiay.insertCell(3).textContent = giaTienGiayTong.toLocaleString('vi-VN') + " đồng";
-            // Nếu có cán mờ thì thêm dòng vào phiếu thu
+            hangGiay.insertCell(2).textContent = giaTienGiay.toLocaleString('vi-VN') + "đ";
+            hangGiay.insertCell(3).textContent = giaTienGiayTong.toLocaleString('vi-VN') + "đ";
+
             if (canMo === "co") {
                 const hangCanMo = bangPhieuThu.insertRow();
                 hangCanMo.insertCell(0).textContent = "Cán mờ";
                 hangCanMo.insertCell(1).textContent = soLuongTo;
-                hangCanMo.insertCell(2).textContent = giaTienCanMo.toLocaleString('vi-VN') + " đồng";
-                hangCanMo.insertCell(3).textContent = giaTienCanMoTong.toLocaleString('vi-VN') + " đồng";
+                hangCanMo.insertCell(2).textContent = giaTienCanMo.toLocaleString('vi-VN') + "đ";
+                hangCanMo.insertCell(3).textContent = giaTienCanMoTong.toLocaleString('vi-VN') + "đ";
             }
-            // Nếu có cắt bế gân thì thêm dòng vào phiếu thu
             if (khongCoGiaCong === "cat-be-gan") {
                 const hangcatBeGan = bangPhieuThu.insertRow();
                 hangcatBeGan.insertCell(0).textContent = "Cắt bế gân";
                 hangcatBeGan.insertCell(1).textContent = soLuongTo;
-                hangcatBeGan.insertCell(2).textContent = giaTiencatBeGan.toLocaleString('vi-VN') + " đồng/tờ";
-                hangcatBeGan.insertCell(3).textContent = giaTiencatBeGanTong.toLocaleString('vi-VN') + " đồng";
+                hangcatBeGan.insertCell(2).textContent = giaTiencatBeGan.toLocaleString('vi-VN') + "đ";
+                hangcatBeGan.insertCell(3).textContent = giaTiencatBeGanTong.toLocaleString('vi-VN') + "đ";
             }
 
-            // Hiển thị tổng tiền và thành tiền bằng chữ
             document.getElementById("phieu-thu-tong-gia").textContent = ketQua.toLocaleString('vi-VN') + " đồng";
             document.getElementById("phieu-thu-tong-tien-chu").textContent = docTien(ketQua);
 
-            document.getElementById("phieu-thu-dai-dien").textContent = "In Tam Tân";
-            document.getElementById("phieu-thu-ngay").textContent = new Date().toLocaleDateString('vi-VN');
-            document.getElementById("phieu-thu").style.display = "block";
-
-            // Hiển thị phiếu thu in
-            document.getElementById("phieu-thu-ma-so-in").textContent = "";
-            document.getElementById("phieu-thu-ten-khach-hang-in").textContent = "";
-            document.getElementById("phieu-thu-dia-chi-in").textContent = "";
-
-            // Xóa các hàng cũ trong bảng phiếu thu in
-            const bangPhieuThuIn = document.getElementById("phieu-thu-bang-in");
-            while (bangPhieuThuIn.rows.length > 1) {
-                bangPhieuThuIn.deleteRow(1);
-            }
-
-            // Thêm hàng in vào bảng phiếu thu in
-            const hangInIn = bangPhieuThuIn.insertRow();
-            hangInIn.insertCell(0).textContent = kichThuocGiay;
-            hangInIn.insertCell(1).textContent = soLuongTo;
-            hangInIn.insertCell(2).textContent = (giaTienInTong / soLuongTo).toLocaleString('vi-VN') + " đồng";
-            hangInIn.insertCell(3).textContent = giaTienInTong.toLocaleString('vi-VN') + " đồng";
-
-            // Thêm hàng giấy vào bảng phiếu thu in
-            const hangGiayIn = bangPhieuThuIn.insertRow();
-            hangGiayIn.insertCell(0).textContent = "Giấy " + loaiGiayCuThe;
-            hangGiayIn.insertCell(1).textContent = soLuongTo;
-            hangGiayIn.insertCell(2).textContent = giaTienGiay.toLocaleString('vi-VN') + " đồng";
-            hangGiayIn.insertCell(3).textContent = giaTienGiayTong.toLocaleString('vi-VN') + " đồng";
-            if (canMo === "co") {
-                const hangCanMoIn = bangPhieuThuIn.insertRow();
-                hangCanMoIn.insertCell(0).textContent = "Cán mờ";
-                hangCanMoIn.insertCell(1).textContent = soLuongTo;
-                hangCanMoIn.insertCell(2).textContent = giaTienCanMo.toLocaleString('vi-VN') + " đồng";
-                hangCanMoIn.insertCell(3).textContent = giaTienCanMoTong.toLocaleString('vi-VN') + " đồng";
-            }
-            if (khongCoGiaCong === "cat-be-gan") {
-                const hangcatBeGanIn = bangPhieuThuIn.insertRow();
-                hangcatBeGanIn.insertCell(0).textContent = "Cắt bế gân";
-                hangcatBeGanIn.insertCell(1).textContent = soLuongTo;
-                hangcatBeGanIn.insertCell(2).textContent = giaTiencatBeGan.toLocaleString('vi-VN') + " đồng/tờ";
-                hangcatBeGanIn.insertCell(3).textContent = giaTiencatBeGanTong.toLocaleString('vi-VN') + " đồng";
-            }
-
-            // Hiển thị tổng tiền và thành tiền bằng chữ cho phiếu thu in
-            document.getElementById("phieu-thu-tong-gia-in").textContent = ketQua.toLocaleString('vi-VN') + " đồng";
-            document.getElementById("phieu-thu-tong-tien-chu-in").textContent = docTien(ketQua);
-
-            document.getElementById("phieu-thu-dai-dien-in").textContent = "In Tam Tân";
-            document.getElementById("phieu-thu-ngay-in").textContent = new Date().toLocaleDateString('vi-VN');
-
-            // Tạo mã số tự động và mã QR
-            const maSoTuDong = "TT" + Date.now();
+            const maSoTuDong = "TT" + Date.now().toString().slice(-6);
             document.getElementById("phieu-thu-ma-so").textContent = maSoTuDong;
-            document.getElementById("phieu-thu-ma-so-in").textContent = maSoTuDong;
+            document.getElementById("phieu-thu-ngay").textContent = new Date().toLocaleDateString('vi-VN');
 
-            const tenNganHang = "VCB";
-            const soTaiKhoan = "0021000773177";
-            const tenChuTaiKhoan = "TRAN QUOC HOAN";
-            const soTien = ketQua;
-            const noiDung = maSoTuDong;
-
-            const qrCodeUrl = `https://img.vietqr.io/image/${tenNganHang}-${soTaiKhoan}-print.png?amount=${soTien}&addInfo=${encodeURIComponent(noiDung)}`;
+            // Tạo mã VietQR tự động
+            const qrCodeUrl = `https://img.vietqr.io/image/VCB-0021000773177-print.png?amount=${ketQua}&addInfo=${encodeURIComponent(maSoTuDong)}`;
             document.getElementById("qr-code-image").src = qrCodeUrl;
-            document.getElementById("qr-code-image-in").src = qrCodeUrl;
+
+            document.getElementById("phieu-thu").style.display = "block";
         });
 
-        // Hàm đọc số tiền thành chữ
+        // Hàm chuyển đổi số tiền thành chữ
         function docTien(soTien) {
             const chuSo = ['không', 'một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín'];
             const hangDonVi = ['', 'nghìn', 'triệu', 'tỷ'];
-            const hangChuc = ['', 'mươi', 'trăm'];
 
             let s = soTien.toString();
             let len = s.length;
-
-            if (len === 0) {
-                return 'không đồng';
-            }
+            if (len === 0) return 'không đồng';
 
             let i = 0;
             let chuoi = '';
-            let am = false;
-
-            if (s[0] === '-') {
-                am = true;
-                s = s.substring(1);
-                len--;
-            }
 
             while (i < len) {
-                let nhom = parseInt(s.substring(len - i - 3, len - i));
+                let nhom = parseInt(s.substring(Math.max(0, len - i - 3), len - i)) || 0;
                 if (nhom !== 0) {
-                    let sNhom = '';
                     let tram = Math.floor(nhom / 100);
                     let chuc = Math.floor((nhom % 100) / 10);
                     let donVi = nhom % 10;
+                    let sNhom = '';
 
-                    if (tram > 0) {
-                        sNhom += chuSo[tram] + ' trăm ';
-                    }
+                    if (tram > 0) sNhom += chuSo[tram] + ' trăm ';
                     if (chuc > 1) {
                         sNhom += chuSo[chuc] + ' mươi ';
-                        if (donVi > 0) {
-                            sNhom += chuSo[donVi];
-                        }
+                        if (donVi > 0) sNhom += chuSo[donVi];
                     } else if (chuc === 1) {
                         sNhom += 'mười ';
-                        if (donVi > 0) {
-                            sNhom += chuSo[donVi];
-                        }
+                        if (donVi > 0) sNhom += chuSo[donVi];
                     } else if (donVi > 0) {
                         sNhom += chuSo[donVi];
                     }
-                    chuoi = sNhom + hangDonVi[Math.floor(i / 3)] + ' ' + chuoi;
+                    chuoi = sNhom + ' ' + hangDonVi[Math.floor(i / 3)] + ' ' + chuoi;
                 }
                 i += 3;
             }
-
-            if (am) {
-                chuoi = 'âm ' + chuoi;
-            }
-
             return chuoi.trim() + ' đồng';
         }
     </script>
-</head>
-<body>
 
-    <h2>In Tam Tân - BẢNG GIÁ TRANG IN</h2>
-        <!-- Liên kết đến tệp CSS riêng -->
-
-
-
-
-    <table>
-        <thead>
-            <tr>
-                <th class="header">SỐ TRANG IN <br> (trang)</th>
-                <th class="header">GIẤY THƯỜNG <br> DECAL GIẤY</th>
-                <th class="header">DECAL BẠC <br> DECAL TRONG <br> DECAL NHỰA</th>
-                <th class="header">DECAL VỠ</th>
-                <th class="header">PHÔI PHONG BÌ</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b>01 - 10</b></td>
-                <td>3.000 - 4.500</td>
-                <td>5.000</td>
-                <td>6.000</td>
-                <td>4.000</td>
-            </tr>
-            <tr>
-                <td><b>11 - 50</b></td>
-                <td>2.500</td>
-                <td>4.500</td>
-                <td>5.600</td>
-                <td>3.000</td>
-            </tr>
-            <tr>
-                <td><b>51 - 100</b></td>
-                <td>2.000</td>
-                <td>3.000</td>
-                <td>3.400</td>
-                <td>2.000</td>
-            </tr>
-            <tr>
-                <td><b>101 - 150</b></td>
-                <td>1.850</td>
-                <td>2.500</td>
-                <td>2.800</td>
-                <td>1.600</td>
-            </tr>
-            <tr>
-                <td><b>151 - 200</b></td>
-                <td>1.700</td>
-                <td>1.850</td>
-                <td>2.600</td>
-                <td>1.500</td>
-            </tr>
-            <tr>
-                <td><b>201 - 250</b></td>
-                <td>1.500</td>
-                <td>1.750</td>
-                <td>2.400</td>
-                <td>1.400</td>
-            </tr>
-            <tr>
-                <td><b>251 - 300</b></td>
-                <td>1.300</td>
-                <td>1.650</td>
-                <td>2.300</td>
-                <td>1.300</td>
-            </tr>
-            <tr>
-                <td><b>301 - 400</b></td>
-                <td>1.200</td>
-                <td>1.600</td>
-                <td>2.200</td>
-                <td>1.200</td>
-            </tr>
-            <tr>
-                <td><b>401 - 500</b></td>
-                <td>1.100</td>
-                <td>1.550</td>
-                <td>2.100</td>
-                <td>1.100</td>
-            </tr>
-            <tr>
-                <td><b>501 - 1.000</b></td>
-                <td>1.000</td>
-                <td>1.500</td>
-                <td>2.000</td>
-                <td>1.000</td>
-            </tr>
-            <tr>
-                <td><b>> 15.001</b></td>
-                <td>xxx</td>
-                <td>xxx</td>
-                <td>xxx</td>
-                <td>xxx</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <p class="italic">(Bảng giá chưa bao gồm tiền giấy, gia công, thuế VAT)</p>
-  
-</script>
-</head>
-<body>
-
-    <h2 class="title">BẢNG GIÁ GIẤY</h2>
-        <!-- Liên kết đến tệp CSS riêng -->
-
-
-
-    <table>
-        <thead>
-            <tr>
-                <th class="header" rowspan="2">LOẠI GIẤY</th>
-                <th class="header" colspan="2">ĐƠN GIÁ (đồng/tờ)</th>
-                <th class="header" rowspan="2">LOẠI DECAL</th>
-                <th class="header" rowspan="2">ĐƠN GIÁ (đồng/tờ)</th>
-            </tr>
-            <tr>
-                <th class="header">A3</th>
-                <th class="header">A4</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>C100</td>
-                <td>xxx</td>
-                <td>xxx</td>
-                <td>Decal giấy 21x31cm</td>
-                <td>1.000</td>
-            </tr>
-            <tr>
-                <td>C120</td>
-                <td>700</td>
-                <td>350</td>
-                <td>Decal vỡ KT 26.5x43cm</td>
-                <td>16.000</td>
-            </tr>
-            <tr>
-                <td>C150</td>
-                <td>800</td>
-                <td>400</td>
-                <td>Decal Bạc, Thiếc A3</td>
-                <td>3.000</td>
-            </tr>
-            <tr>
-                <td>C200</td>
-                <td>1.000</td>
-                <td>500</td>
-                <td>Decal Thiếc 7 màu A3</td>
-                <td>8.000</td>
-            </tr>
-            <tr>
-                <td>C250</td>
-                <td>1.200</td>
-                <td>600</td>
-                <td>Decal Nhựa trong, sữa A3</td>
-                <td>4.000</td>
-            </tr>
-            <tr>
-                <td>C300</td>
-                <td>1.400</td>
-                <td>700</td>
-                <td>Decal Nhựa trong, sữa A3</td>
-                <td>4.000</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table>
-        <thead>
-            <tr>
-                <th class="header">LOẠI PHONG BÌ</th>
-                <th class="header">ĐƠN GIÁ (đồng/chiếc)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Phong bì gấp sẵn 12x22 (Offset 100)</td>
-                <td>850</td>
-            </tr>
-            <tr>
-                <td>Phong bì gấp sẵn 16x23 (Offset 100)</td>
-                <td>800</td>
-            </tr>
-            <tr>
-                <td>Phong bì gấp sẵn 25x34 (Offset 120)</td>
-                <td>1.300</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <p class="italic">(Áp dụng từ ngày 12/09/2024 - giá chưa VAT 8%)</p>
-
-    <h3 class="title">BẢNG GIÁ IN LASER ĐEN TRẮNG</h3>
-
-    <table>
-        <thead>
-            <tr>
-                <th class="header" rowspan="2">SỐ LƯỢNG (trang)</th>
-                <th class="header" colspan="2">IN TRÊN GIẤY OFFSET/COUCHE</th>
-                <th class="header" rowspan="2">IN TRÊN GIẤY DECAL</th>
-            </tr>
-            <tr>
-                <th class="header">ĐƠN GIÁ (đồng/trang A4)</th>
-                <th class="header">Lưu ý</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Dưới 500</td>
-                <td>xxx</td>
-                <td>(Định lượng giấy dưới 150gsm)</td>
-                <td>xxx</td>
-            </tr>
-            <tr>
-                <td>≥ 500</td>
-                <td>xxx</td>
-                <td>(Định lượng giấy dưới 150gsm)</td>
-                <td>xxx</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <!-- Script Firebase Compat & JS Chung -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
 </body>
-</head>
-<body>
-
-    <p class="title">In Tam Tân. BÁO GIÁ IN CARD VISIT</p>
-        <!-- Liên kết đến tệp CSS riêng -->
-
-
-
-    <p class="sub-title">In C300, cán mờ 2 mặt đóng vỏ hộp cứng sang trọng</p>
-    <p class="description">Thời gian giao hàng tại Hà Nội: 1 ngày <br> Gửi xe cho khách hàng ở tỉnh: 2-3 ngày</p>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Số lượng (Hộp/nd)</th>
-                    <th>Đơn Giá (vnđ) Cán mờ</th>
-                    <th>Không cán</th>
-                    <th>Giấy mỹ thuật (kem, sần, ngọc trai)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>1 hộp - 8 hộp</td><td>60.000</td><td>45.000</td><td>75.000</td></tr>
-                <tr><td>9 - 15 hộp</td><td>55.000</td><td>43.000</td><td>70.000</td></tr>
-                <tr><td>16 - 20 hộp</td><td>50.000</td><td>40.000</td><td>65.000</td></tr>
-                <tr><td>21 - 50 hộp</td><td>48.000</td><td>35.000</td><td>60.000</td></tr>
-                <tr><td>50 - 100 hộp</td><td>45.000</td><td>32.000</td><td>57.000</td></tr>
-                <tr><td>100 hộp trở lên</td><td>43.000</td><td>30.000</td><td>55.000</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <p class="note">Card bo góc thường thêm 5k mỗi hộp <br> Card bo góc giống thẻ ngân hàng thêm 20k mỗi hộp</p>
-    <p class="important-note">Báo giá trên chưa bao gồm VAT</p>
-
-</body>
-</head>
-<body>
-
-    <h2>BẢNG QUY ĐỔI KÍCH THƯỚC</h2>
-        <!-- Liên kết đến tệp CSS riêng -->
-
-
-
-    <table>
-        <thead>
-            <tr>
-                <th class="header">KÍCH THƯỚC 1 CHIỀU (cm)</th>
-                <th class="header">QUY ĐỔI <br> (tính giá bảng) <br> (trang A4)</th>
-                <th class="header">SỐ LƯỢNG <br> (trang)</th>
-                <th class="header">KÍCH THƯỚC <br> (cm)</th>
-                <th class="header">QUY ĐỔI <br> (tính giá bảng) <br> (trang A4)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>> 33 đến < 43</td>
-                <td>2</td>
-                <td>100</td>
-                <td>22 x 33</td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>> 43 đến < 48</td>
-                <td>2.5</td>
-                <td>100</td>
-                <td>33 x 48</td>
-                <td>250</td>
-            </tr>
-            <tr>
-                <td>> 48 đến < 55</td>
-                <td>3</td>
-                <td>100</td>
-                <td>27 x 55</td>
-                <td>300</td>
-            </tr>
-            <tr>
-                <td>> 55 đến < 76</td>
-                <td>5</td>
-                <td>100</td>
-                <td>22 x 70</td>
-                <td>500</td>
-            </tr>
-            <tr>
-                <td>> 76 đến < 100</td>
-                <td>6</td>
-                <td>100</td>
-                <td>32.5 x 100</td>
-                <td>600</td>
-            </tr>
-            <tr>
-                <td>> 100 đến < 130</td>
-                <td>7</td>
-                <td>100</td>
-                <td>32.5 x 130</td>
-                <td>700</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <p class="note">Nhỏ nhất: 9.8 x 14.6 (cm)</p>
-    <p class="note">Lớn nhất: 33 x 130 (cm)</p>
-
-</body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng giá cán màng và nhựa tổng hợp</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #ADD8E6;
-        }
-        .header {
-            background-color: #ADD8E6;
-            font-weight: bold;
-            color: red;
-        }
-        .italic {
-            font-style: italic;
-            color: red;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-    <h2>BẢNG GIÁ CÁN MÀNG</h2>
-    <table>
-        <thead>
-            <tr>
-                <th class="header">Loại Cán</th>
-                <th class="header">A4 (đồng/tờ)</th>
-                <th class="header">A3 (đồng/tờ)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Cán nhiệt 1 mặt</td>
-                <td>1.000</td>
-                <td>2.000</td>
-            </tr>
-            <tr>
-                <td>Cán nhiệt 2 mặt</td>
-                <td>1.500</td>
-                <td>3.000</td>
-            </tr>
-            <tr>
-                <td>Cán nguội 1 mặt</td>
-                <td>2.000</td>
-                <td>4.000</td>
-            </tr>
-            <tr>
-                <td>Cán nguội 2 mặt</td>
-                <td>3.000</td>
-                <td>6.000</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>BẢNG GIÁ NHỰA TỔNG HỢP</h2>
-    <table>
-        <thead>
-            <tr>
-                <th class="header">Loại Nhựa</th>
-                <th class="header">Định Lượng</th>
-                <th class="header">Giá Hộp (đồng)</th>
-                <th class="header">Giá Tờ (đồng/tờ A4)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Nhựa trắng</td>
-                <td>385gr</td>
-                <td>275.000</td>
-                <td>35.000 (trong nhiều 30.000/tờ)</td>
-            </tr>
-            <tr>
-                <td>Nhựa trắng</td>
-                <td>490gr</td>
-                <td>350.000</td>
-                <td>40.000 (trong nhiều 35.000/tờ)</td>
-            </tr>
-            <tr>
-                <td>Nhựa trong mờ</td>
-                <td>175gr</td>
-                <td>180.000</td>
-                <td>20.000 (trong nhiều 18.000/tờ)</td>
-            </tr>
-            <tr>
-                <td>Nhựa trong mờ</td>
-                <td>280gr</td>
-                <td>280.000</td>
-                <td>25.000 (trong nhiều 20.000/tờ)</td>
-            </tr>
-            <tr>
-                <td>Nhựa trong suốt</td>
-                <td>250gr</td>
-                <td>300.000</td>
-                <td>35.000 (trong nhiều 30.000/tờ)</td>
-            </tr>
-            <tr>
-                <td>Nhựa hạng bạc</td>
-                <td>280gr</td>
-                <td>300.000</td>
-                <td>35.000 (trong nhiều 30.000/tờ)</td>
-            </tr>
-        </tbody>
-    </table>
-
-</body>
-</head>
-<body>
-    <p class="title">Bảng Giá Đề Can Giấy, 7 màu, nhũ bạc - Cắt bế Size 28x38cm (A3)</p>
-        <!-- Liên kết đến tệp CSS riêng -->
-
-
-
-    <p class="sub-title">Đề can trong, nhựa - Cắt bế Size 28x43cm (A3)</p>
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Số Lượng (Tờ)</th>
-                    <th>Đề Can Giấy (Không Cán)</th>
-                    <th>Đề Can Giấy (Cán Mờ/Bóng)</th>
-                    <th>Đề Can Nhựa</th>
-                    <th>Đề Can 7 Màu</th>
-                    <th>Đề Can Nhũ Bạc</th>
-                    <th>Đề Can Trong</th>
-                    <th>Tem Vỡ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>1 - 5</td><td>20.000đ</td><td>25.000đ</td><td>30.000đ</td><td>33.000đ</td><td>31.000đ</td><td>31.000đ</td><td>40.000đ</td></tr>
-                <tr><td>6 - 10</td><td>18.000đ</td><td>21.000đ</td><td>25.000đ</td><td>30.000đ</td><td>28.000đ</td><td>28.000đ</td><td>38.000đ</td></tr>
-                <tr><td>11 - 15</td><td>15.000đ</td><td>18.000đ</td><td>22.000đ</td><td>27.000đ</td><td>24.000đ</td><td>24.000đ</td><td>35.000đ</td></tr>
-                <tr><td>16 - 20</td><td>12.000đ</td><td>15.000đ</td><td>18.000đ</td><td>23.000đ</td><td>21.000đ</td><td>20.000đ</td><td>32.000đ</td></tr>
-                <tr><td>21 - 80</td><td>10.000đ</td><td>13.000đ</td><td>15.000đ</td><td>21.000đ</td><td>19.000đ</td><td>19.000đ</td><td>30.000đ</td></tr>
-                <tr><td>81 - 500</td><td>8.000đ</td><td>11.000đ</td><td>13.000đ</td><td>19.000đ</td><td>17.000đ</td><td>17.000đ</td><td>28.000đ</td></tr>
-                <tr><td>501 - 1000</td><td>7.000đ</td><td>10.000đ</td><td>12.000đ</td><td>18.000đ</td><td>15.000đ</td><td>15.000đ</td><td>25.000đ</td></tr>
-                <tr><td>1001 trở lên</td><td>6.000đ</td><td>9.000đ</td><td>--</td><td>--</td><td>--</td><td>--</td><td>--</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <p style="color: red; font-weight: bold; text-align: right;">Báo giá trên chưa bao gồm VAT</p>
-</body>
-</head>
-<body>
-
-    <p class="title">In Tam Tân. BẢNG GIÁ IN KẸP FILE</p>
-        <!-- Liên kết đến tệp CSS riêng -->
-
-
-
-    <p class="sub-title">Báo giá trên chưa bao gồm VAT</p>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Số Lượng</th>
-                    <th>Kẹp File A4</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Số Lượng">1 - 10</td>
-                    <td data-label="Kẹp File A4">35.000đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">11 - 50</td>
-                    <td data-label="Kẹp File A4">25.000đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">51 - 100</td>
-                    <td data-label="Kẹp File A4">20.000đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">101 - 200</td>
-                    <td data-label="Kẹp File A4">18.000đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">201 - 999</td>
-                    <td data-label="Kẹp File A4">17.000đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">1000</td>
-                    <td data-label="Kẹp File A4">Liên hệ giá tốt</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <p class="title">In Tam Tân. BẢNG GIÁ IN PHONG BÌ</p>
-    <p class="sub-title">Báo giá trên chưa bao gồm VAT</p>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Số Lượng</th>
-                    <th>Phong Bì A6 (22x12cm)</th>
-                    <th>Phong Bì A5 (16x23cm)</th>
-                    <th>Phong Bì A4 (22x30cm)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Số Lượng">1 - 30</td>
-                    <td data-label="Phong Bì A6">5.000đ</td>
-                    <td data-label="Phong Bì A5">7.000đ</td>
-                    <td data-label="Phong Bì A4">8.000đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">31 - 99</td>
-                    <td data-label="Phong Bì A6">3.500đ</td>
-                    <td data-label="Phong Bì A5">4.000đ</td>
-                    <td data-label="Phong Bì A4">5.000đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">100 - 299</td>
-                    <td data-label="Phong Bì A6">2.500đ</td>
-                    <td data-label="Phong Bì A5">3.000đ</td>
-                    <td data-label="Phong Bì A4">3.500đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">300 - 499</td>
-                    <td data-label="Phong Bì A6">1.700đ</td>
-                    <td data-label="Phong Bì A5">2.000đ</td>
-                    <td data-label="Phong Bì A4">3.300đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Số Lượng">1000</td>
-                    <td colspan="3" style="text-align: center;">Liên hệ giá tốt</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <p><b>In Tam Tân.</b> In hóa đơn các bon, liên hệ <span style="color:red;">Call</span> hoặc <span style="color:blue;">Zalo</span> để được tư vấn.</p>
-    <p><b>In Tam Tân.</b> In túi, hộp các loại nhũ, liên hệ <span style="color:red;">Call</span> hoặc <span style="color:blue;">Zalo</span> để được tư vấn.</p>
-
-</body>
-</html>
-  <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng Giá Gia Công</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .title {
-            font-size: 20px;
-            font-weight: bold;
-            color: blue;
-        }
-        .sub-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: red;
-        }
-        .highlight {
-            font-weight: bold;
-            color: red;
-        }
-        .table-container {
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #ADD8E6;
-        }
-        /* Hiển thị dọc trên điện thoại */
-        @media (max-width: 600px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
-                width: 100%;
-            }
-            thead {
-                display: none;
-            }
-            tr {
-                margin-bottom: 10px;
-                border: 1px solid #ddd;
-                padding: 10px;
-                background-color: #f9f9f9;
-            }
-            td {
-                text-align: left;
-                padding: 8px;
-                display: flex;
-                justify-content: space-between;
-                border: none;
-                border-bottom: 1px solid #ddd;
-            }
-            td:last-child {
-                border-bottom: none;
-            }
-            td::before {
-                content: attr(data-label);
-                font-weight: bold;
-                color: #333;
-            }
-        }
-        .footer-text {
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 10px;
-            background: linear-gradient(to right, #ffffff, #add8e6, #ffffff);
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-
-    <p class="title">In Tam Tân. TÍNH GIÁ GIA CÔNG</p>
-    <p class="highlight">Giấy mỹ thuật - 3000đ/tờ a4</p>
-    <p class="sub-title">Gia công cắt bế + xén</p>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Dịch vụ</th>
-                    <th>Giá tiền</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Dịch vụ">Cắt A4</td>
-                    <td data-label="Giá tiền">100đ/tờ, A5 - A6 từ 200đ/tờ</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Đục lỗ, bo góc</td>
-                    <td data-label="Giá tiền">500đ/tờ</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Ghim quyển</td>
-                    <td data-label="Giá tiền">2.000đ/quyển</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Ghim 1 góc</td>
-                    <td data-label="Giá tiền">1.000đ</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Đóng keo lẻ</td>
-                    <td data-label="Giá tiền">45.000đ/quyển (từ 10 - 200q giảm dần)</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Đóng gáy xoắn</td>
-                    <td data-label="Giá tiền">15.000đ/quyển (trên 50q 13.000đ, trên 200q 12.000đ)</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Ghim bấm dính mica</td>
-                    <td data-label="Giá tiền">15.000đ/quyển (trên 50q 13.000đ, trên 200q 12.000đ)</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Cắt bế CNC</td>
-                    <td data-label="Giá tiền">5000đ/tờ A3 - 4000đ/tờ vuông - 3000đ/tờ A4</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Cán mờ</td>
-                    <td data-label="Giá tiền">1.500đ/A4 - 3.000đ/A3</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Số nhảy</td>
-                    <td data-label="Giá tiền">1.000 - 2.000đ/tờ (trên 200 tờ 500đ/tờ)</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Bế xé răng cưa</td>
-                    <td data-label="Giá tiền">1.000đ/tờ (trên 200 tờ 500đ/tờ)</td>
-                </tr>
-                <tr>
-                    <td data-label="Dịch vụ">Đóng quyển lịch bàn A5</td>
-                    <td data-label="Giá tiền">30.000đ/quyển (trên 100q 20.000đ/quyển)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-<!-- Bảng Giá Gia Công Ép Plastic -->
-
-<h3 style="margin-top: 20px;">BẢNG GIÁ ÉP PLASTIC<i> (khổ A4)</i></h3>
-
-  <table>
-    <thead>
-     
-      <tr>
-        <th>Số lượng</th>
-        <th>Đơn giá</th>
-        <th>Số lượng</th>
-        <th>Đơn giá</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1 - 10</td>
-        <td>5.000đ</td>
-        <td>1 - 70(a5)</td>
-        <td>2.500đ</td>
-      </tr>
-      <tr>
-        <td>11 - 80</td>
-        <td>4.500đ</td>
-        <td>> 70(a5)</td>
-        <td>2.300đ</td>
-      </tr>
-      <tr>
-        <td>81 - 100</td>
-        <td>4.000đ</td>
-        <td>x</td>
-        <td>x</td>
-      </tr>
-      <tr>
-        <td>> 100</td>
-        <td>3.500đ</td>
-        <td>x</td>
-        <td>x</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-    <p class="footer-text">Rất mong nhận được sự ủng hộ và hợp tác tốt đẹp cùng anh/chị</p>
-
-</body>
-</html>
-  <a href="download/dl.pdf" target="_blank">
-    <button style="
-        padding: 12px 24px;
-        font-size: 16px;
-        font-weight: bold;
-        background: linear-gradient(45deg, #ff416c, #ff4b2b);
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 8px;
-        transition: 0.3s ease;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    " 
-    onmouseover="this.style.background='linear-gradient(45deg, #ff4b2b, #ff416c)';" 
-    onmouseout="this.style.background='linear-gradient(45deg, #ff416c, #ff4b2b)';">
-        📥 Tải File Báo Giá
-    </button>
-</a>
-    </section>
-  </section>
-  
-  <!-- Bản đồ -->
-  <div class="footer-map">
-    <h3>📍 BẢN ĐỒ</h3>
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7448.487390100704!2d105.823365!3d21.022933!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab7745909f35%3A0x57fc5e42dc387660!2sIn%20Tam%20T%C3%A2n!5e0!3m2!1svi!2sus!4v1745381312355!5m2!1svi!2sus"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-          
-          </section>
-          
-
-    <section id="footer" class="bg-black text-white">
-        <div class="container padding-medium">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                    <div class="logo"><img src="images/logo2-01-01-01.svg" alt="logo"></div>
-                </div>
-                <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
-                    <nav>
-                        <ul class="list-unstyled">
-                            <li class="nav-item mb-2">
-                                <a class="nav-link nav-link-ltr" href="https://intamtan.net/">Home</a>
-                            </li>
-                            <li class="nav-item mb-2 ">
-                                <a class="nav-link nav-link-ltr" href="gioithieuintamtan.html">Giới Thiệu</a>
-                            <li class="nav-item mb-2">
-                                <a class="nav-link nav-link-ltr" href="lienheintamtan.html">Liên Hệ</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a class="nav-link nav-link-ltr" href="account.html">Lịch Trực Nhân Viên</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
-                    <nav>
-                        <ul class="list-unstyled">
-                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="danhmucintamtan.html">Danh Mục Sản Phẩm</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="danhmucintamtan.html">Mẫu Hàng</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="download/dl.pdf">Tải File Báo Giá</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
-                    <nav>
-                        <ul class="list-unstyled">
-                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="https://www.facebook.com/people/Tam-T%C3%A2n/pfbid0LH7CfFkQY1qFcGN2MNiKVdncYYRv7hfg1mVUJZF1rzezJEdjAkXVdCo1fa4TpwdLl/">FACEBOOK</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="https://zalo.me/g/akhfmt053">Cộng Đồng ZaLo</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="https://zalo.me/0904370010">ZaLo</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="https://www.youtube.com/channel/UCWTAClK6Y4jWJTWWXxf_1TA">YOUTUBE</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="mailto:intamtan.net@gmail.com">Gmail</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                    Bạn có thắc mắc vui lòng gửi ?<br>
-                    <p>Email: <a href="mailto:intamtan.net@gmail.com">intamtan.net@gmail.com</a></p>
-                    Nếu cần hỗ trợ? Hãy gọi cho chúng tôi. <br>
-                    <a href="tel:0904370010">0904.37.0010</a></p>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="copyright text-center">
-            <p class="m-0 pb-3">© 2026 In Tam Tân. All rights reserved. <a href="https://intamtan.net//"
-                    target="_blank" class="text-decoration-underline text-white"> Intamtan</a></p>
-        </div>
-    </section>
-
-    <!-- Video Popup -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi"
-                            width="40" height="40">
-                            <use xlink:href="#close-sharp"></use>
-                        </svg></button>
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="cta-float-buttons">
-        <a href="https://zalo.me/0904370010" class="cta-btn zalo" target="_blank"></a>
-        <a href="https://www.facebook.com/people/Tam-T%C3%A2n/pfbid0LH7CfFkQY1qFcGN2MNiKVdncYYRv7hfg1mVUJZF1rzezJEdjAkXVdCo1fa4TpwdLl/" class="cta-btn messenger" target="_blank"></a>
-        <a href="tel:0904370010" class="cta-btn call"></a>
-      
-        <!-- Nút lên đầu trang -->
-        <a href="#" class="cta-btn to-top" id="backToTop"></a>
-      </div>
-
-    <!-- Script -->
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-
-</body>
-
 </html>
