@@ -1,3 +1,13 @@
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.clients.claim();
+});
+
 self.addEventListener('fetch', (event) => {
-  // Service worker cơ bản phục vụ việc cài đặt PWA
+  event.respondWith(
+    fetch(event.request).catch(() => caches.match(event.request))
+  );
 });
