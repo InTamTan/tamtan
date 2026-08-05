@@ -912,3 +912,39 @@ if ('serviceWorker' in navigator) {
         .catch((err) => console.log('Đăng ký Service Worker thất bại:', err));
     });
   }
+  // ==================== XỬ LÝ MENU MOBILE TRƯỢT XUỐNG ====================
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navContainer = document.querySelector('.nav-container');
+
+    if (mobileMenuToggle && navContainer) {
+        mobileMenuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navContainer.classList.toggle('mobile-active');
+            
+            // Đổi icon 3 gạch thành dấu X khi mở menu và ngược lại
+            const icon = mobileMenuToggle.querySelector('i');
+            if (icon) {
+                if (navContainer.classList.contains('mobile-active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+
+        // Bấm ra ngoài vùng menu thì tự động đóng lại
+        document.addEventListener('click', (e) => {
+            if (!navContainer.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                navContainer.classList.remove('mobile-active');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+    }
+});
