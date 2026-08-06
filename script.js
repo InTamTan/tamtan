@@ -18,9 +18,6 @@ const db = firebase.firestore();
 // API Cloudflare KV Quản lý Hóa đơn
 const CLOUDFLARE_API_URL = "https://hoadonintamtan.catchudecan.workers.dev";
 
-// API Cloudflare Worker Gửi Email (Resend)
-const CLOUDFLARE_EMAIL_WORKER_URL = "https://intamtan-email.intamtan-net.workers.dev";
-
 let invoices = [];
 let currentFilter = 'all';
 
@@ -60,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const txtUserName = document.getElementById('txtUserName');
             if (txtUserName) txtUserName.innerText = displayName;
 
-            // Nếu đang đứng ở trang hoadonintamtan.html -> Tải dữ liệu từ Cloudflare KV
             if (window.location.pathname.includes('hoadonintamtan.html')) {
                 setupInvoicePageEvents();
                 await loadFromCloudflare();
@@ -121,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (closeAuthBtn) closeAuthBtn.addEventListener('click', () => authModal && authModal.classList.remove('active'));
 
-    // Kích hoạt Neon Ring khi focus ô Input/Textarea
     const allInputs = document.querySelectorAll('.ios-input-box input, .ios-input-box textarea');
     allInputs.forEach(input => {
         const wrapper = input.closest('.neon-input-wrapper');
@@ -183,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const specTime = document.getElementById('specTime');
 
     document.querySelectorAll('.menu-card').forEach(card => {
-        card.addEventListener('click', function(e) {
+        card.addEventListener('click', function() {
             const title = this.dataset.title || this.querySelector('h3').innerText;
             const img = this.dataset.img || this.querySelector('.menu-img').src;
             const desc = this.dataset.desc || this.querySelector('.product-desc').innerText;
@@ -250,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
         switchToLoginMobile.addEventListener('click', (e) => { e.preventDefault(); authDualContainer.classList.remove('right-panel-active'); });
     }
 
-    // ==================== NÚT TRỜ VỀ ĐẦU TRANG & NÚT THEME SÁNG/TỐI ====================
+    // ==================== NÚT TRỜ VỀ ĐẦU TRANG & THEME SÁNG/TỐI ====================
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -275,7 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (rememberCheckbox) rememberCheckbox.checked = true;
     }
 
-    // 1. Đăng nhập
     const authLoginForm = document.getElementById('authLoginForm');
     if (authLoginForm) {
         authLoginForm.addEventListener('submit', (e) => {
@@ -303,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Đăng ký tài khoản
     const authRegisterForm = document.getElementById('authRegisterForm');
     if (authRegisterForm) {
         authRegisterForm.addEventListener('submit', (e) => {
@@ -336,7 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Quên mật khẩu
     const forgotPasswordBtn = document.getElementById('forgotPasswordBtn');
     if (forgotPasswordBtn) {
         forgotPasswordBtn.addEventListener('click', (e) => {
@@ -357,7 +349,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Đăng nhập Google
     const googleAuthBtn = document.getElementById('googleAuthBtn');
     if (googleAuthBtn) {
         googleAuthBtn.addEventListener('click', () => {
@@ -373,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==================== FORM PHẢN HỒI EMAIL (GỬI QUA CLOUDFLARE WORKER & RESEND) ====================
+    // ==================== FORM PHẢN HỒI EMAIL (GỬI QUA EMAILJS) ====================
     const feedbackForm = document.getElementById('feedbackForm');
     if (feedbackForm) {
         feedbackForm.addEventListener('submit', async function(e) {
@@ -384,31 +375,27 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerText = "ĐANG GỬI PHẢN HỒI...";
             submitBtn.disabled = true;
 
-            const payload = {
-                name: document.getElementById('fbName').value.trim(),
-                email: document.getElementById('fbEmail').value.trim(),
-                message: document.getElementById('fbMessage').value.trim()
+            const name = document.getElementById('fbName').value.trim();
+            const email = document.getElementById('fbEmail').value.trim();
+            const message = document.getElementById('fbMessage').value.trim();
+
+            const SERVICE_ID = "service_7d00hsc";
+            const TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Thay mã Template ID của bạn trên EmailJS vào đây
+            const PUBLIC_KEY = "DZIF7NMoonp_glgr8";   
+
+            const templateParams = {
+                from_name: name,
+                email: email,
+                message: message
             };
 
             try {
-                // Gọi API sang Cloudflare Worker
-                const response = await fetch(CLOUDFLARE_EMAIL_WORKER_URL, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-
-                if (response.ok && result.success) {
-                    alert("✅ Cảm ơn bạn! Yêu cầu báo giá và phản hồi đã được gửi thành công đến In Tam Tân.");
-                    feedbackForm.reset();
-                } else {
-                    const errDetail = typeof result.error === 'object' ? JSON.stringify(result.error) : result.error;
-                    alert("❌ Gửi thất bại: " + (errDetail || "Lỗi hệ thống"));
-                }
+                await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+                alert("✅ Cảm ơn bạn! Yêu cầu báo giá và phản hồi đã được gửi thành công đến In Tam Tân.");
+                feedbackForm.reset();
             } catch (error) {
-                alert("❌ Lỗi kết nối mạng: " + error.message);
+                console.error("EmailJS Error:", error);
+                alert("❌ Gửi thất bại! Vui lòng liên hệ trực tiếp qua Zalo/Hotline.");
             } finally {
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
@@ -454,7 +441,6 @@ function updateDashboardStats() {
     if (lblVal) lblVal.innerText = totalValue.toLocaleString('vi-VN') + 'đ';
     if (lblDraft) lblDraft.innerText = draftCount;
 
-    // TÍNH TOÁN CỘT BIỂU ĐỒ 12 THÁNG
     const monthlyTotals = Array(12).fill(0);
     invoices.forEach(inv => {
         const dateObj = inv.timestamp ? new Date(inv.timestamp) : new Date();
@@ -767,7 +753,6 @@ window.deleteInvoice = async function(id) {
     }
 };
 
-// ==================== HÀM RENDER TỰ ĐỘNG CHIA THEO CÔNG TY & MST ====================
 function renderInvoices() {
     updateDashboardStats();
 
@@ -777,14 +762,12 @@ function renderInvoices() {
     if (!tbody) return;
     tbody.innerHTML = '';
 
-    // Sắp xếp đơn "Nháp" lên ưu tiên
     invoices.sort((a, b) => {
         if (a.status === 'Nháp' && b.status !== 'Nháp') return -1;
         if (a.status !== 'Nháp' && b.status === 'Nháp') return 1;
         return (b.timestamp || 0) - (a.timestamp || 0);
     });
 
-    // Lọc theo Từ khóa & Tab
     const filtered = invoices.filter(i => {
         const matchesFilter = (currentFilter === 'all' || i.status === currentFilter);
         const hasProductMatch = i.products && i.products.some(p => p.content.toLowerCase().includes(search));
@@ -798,7 +781,6 @@ function renderInvoices() {
         return;
     }
 
-    // GỌM NHÓM THEO CÔNG TY / MÃ SỐ THUẾ
     const groupedCompanies = {};
     filtered.forEach(inv => {
         const key = (inv.companyMst || inv.companyName || 'danh-sach-khac').trim().toLowerCase();
@@ -816,12 +798,10 @@ function renderInvoices() {
 
     let html = '';
 
-    // RENDER THEO TỪNG KHỐI CÔNG TY DỄ QUẢN LÝ
     Object.values(groupedCompanies).forEach(group => {
         const groupTotal = group.items.reduce((sum, item) => sum + (item.totalCost || item.subtotal || 0), 0);
         const draftCount = group.items.filter(item => item.status === 'Nháp').length;
 
-        // Header thẻ Công Ty
         html += `
         <tr class="company-header-row" style="background: rgba(0, 136, 255, 0.08); border-top: 2px solid #0088ff;">
             <td colspan="5" style="padding: 12px 16px;">
@@ -840,7 +820,6 @@ function renderInvoices() {
             </td>
         </tr>`;
 
-        // Danh sách các ngày/giờ yêu cầu thuộc Công ty đó
         group.items.forEach(i => {
             const fileDisplay = i.fileLink 
                 ? `<a href="${i.fileLink}" download="Bill_Chuyen_Khoan" style="color:#0066ff; text-decoration:none; font-weight:700;"><i class="fa-solid fa-image"></i> Xem Bill</a>` 
@@ -905,14 +884,16 @@ function renderInvoices() {
 
     tbody.innerHTML = html;
 }
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
-        .then((reg) => console.log('Service Worker đăng ký thành công thành công!', reg))
+        .then((reg) => console.log('Service Worker đăng ký thành công!', reg))
         .catch((err) => console.log('Đăng ký Service Worker thất bại:', err));
     });
-  }
-  // ==================== XỬ LÝ MENU MOBILE TRƯỢT XUỐNG ====================
+}
+
+// ==================== XỬ LÝ MENU MOBILE TRƯỢT XUỐNG ====================
 document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navContainer = document.querySelector('.nav-container');
@@ -922,7 +903,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             navContainer.classList.toggle('mobile-active');
             
-            // Đổi icon 3 gạch thành dấu X khi mở menu và ngược lại
             const icon = mobileMenuToggle.querySelector('i');
             if (icon) {
                 if (navContainer.classList.contains('mobile-active')) {
@@ -935,7 +915,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Bấm ra ngoài vùng menu thì tự động đóng lại
         document.addEventListener('click', (e) => {
             if (!navContainer.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
                 navContainer.classList.remove('mobile-active');
