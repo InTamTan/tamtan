@@ -27,6 +27,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
+    <!-- Thư viện EmailJS Browser -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVYS28KKCF"></script>
     <script>
@@ -218,21 +224,13 @@
                 </li>
             </ul>
         </nav>
-        <head>
-            <!-- Các thẻ meta và font hiện tại của bạn -->
-            <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="style.css">
-            
-            <!-- 👉 THÊM THƯ VIỆN FONTAWESOME ĐỂ HIỆN ICON 3 GẠCH VÀ DẤU X -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        </head>
+
         <div class="header-actions">
-            <!-- 👉 NÚT 3 GẠCH CHO MOBILE -->
+            <!-- NÚT 3 GẠCH CHO MOBILE -->
             <button class="mobile-menu-toggle-btn" id="mobileMenuToggle" title="Mục lục">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-        <div class="header-actions">
             <!-- THANH TÌM KIẾM AESTHETIC VỚI VIỀN NEON -->
             <div class="neon-wrapper search-container" id="searchContainer">
                 <div class="neon-ring"></div>
@@ -657,7 +655,7 @@
         </div>
     </section>
 
-    <!-- FOOTER & PHẢN HỒI EMAIL ĐỒNG BỘ NEON -->
+    <!-- FOOTER & PHẢN HỒI EMAIL -->
     <footer class="site-footer" id="contact">
         <div class="footer-container">
             <div class="footer-grid">
@@ -687,7 +685,7 @@
                     </div>
                 </div>
 
-                <!-- Cột 2: Form phản hồi CÓ NEON RING SPIN -->
+                <!-- Cột 2: Form phản hồi kết nối EmailJS -->
                 <div class="footer-col feedback-col">
                     <h3 class="footer-col-title">YÊU CẦU BÁO GIÁ & PHẢN HỒI</h3>
                     <p class="feedback-sub">Quý khách cần báo giá in ấn riêng hoặc gửi file thiết kế, vui lòng điền thông tin tin nhắn tại đây:</p>
@@ -750,23 +748,18 @@
 
     <!-- FLOATING CONTACTS - GÓC PHẢI -->
     <div class="floating-contacts">
-        <!-- Zalo App Icon -->
         <div class="neon-wrapper float-btn-wrapper">
             <div class="neon-ring"></div>
             <a href="https://zalo.me/0904370010" target="_blank" class="float-btn float-zalo" data-tooltip="Chat Zalo Tam Tân">
                 <svg width="26" height="26" viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 11.83 4 21.48C4 26.68 6.84 31.33 11.31 34.5L9.36 41.87C9.17 42.59 9.87 43.19 10.54 42.86L18.8 38.75C20.46 39.27 22.2 39.54 24 39.54C35.05 39.54 44 31.71 44 22.06C44 12.41 35.05 4 24 4Z" fill="#0068FF"/></svg>
             </a>
         </div>
-
-        <!-- Facebook App Icon -->
         <div class="neon-wrapper float-btn-wrapper">
             <div class="neon-ring"></div>
             <a href="https://www.facebook.com/people/Tam-T%C3%A2n/pfbid0LH7CfFkQY1qFcGN2MNiKVdncYYRv7hfg1mVUJZF1rzezJEdjAkXVdCo1fa4TpwdLl/" target="_blank" class="float-btn float-fb" data-tooltip="Ghé thăm Fanpage">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
         </div>
-
-        <!-- Phone Icon -->
         <div class="neon-wrapper float-btn-wrapper">
             <div class="neon-ring"></div>
             <a href="tel:0904370010" class="float-btn float-phone" data-tooltip="Gọi Hotline 0904.370.010">
@@ -783,12 +776,10 @@
             <div class="ios-modal product-detail-card">
                 <div class="close-ios" id="closeDetailModal">✕</div>
 
-                <!-- CỘT TRÁI: HÌNH ẢNH MẪU THỰC TẾ -->
                 <div class="detail-img-col">
                     <img id="detailMainImg" src="images/item8.jpg" alt="Mẫu In Tam Tân">
                 </div>
 
-                <!-- CỘT PHẢI: THÔNG TIN CHI TIẾT & BÁO GIÁ -->
                 <div class="detail-info-col">
                     <div class="detail-badge">✨ CHI TIẾT DỊCH VỤ IN</div>
                     <h2 id="detailTitle">Giá Cuốn Tam Tân</h2>
@@ -796,7 +787,6 @@
                         Khung nhôm hợp kim chắc chắn, dễ dàng cuốn gọn khi di chuyển, dùng hiển thị poster sự kiện, hội thảo chuyên nghiệp.
                     </p>
 
-                    <!-- ĐẶC ĐIỂM KỸ THUẬT VẮT TẮT -->
                     <div class="detail-specs">
                         <div class="spec-item">
                             <span class="spec-label">Chất liệu:</span>
@@ -812,7 +802,6 @@
                         </div>
                     </div>
 
-                    <!-- CHÂN MODAL & NÚT ĐẶT IN -->
                     <div class="detail-footer">
                         <div class="brand-tag">🖨️ In Tam Tân</div>
                         <div class="neon-wrapper">
@@ -837,7 +826,7 @@
         </div>
     </div>
 
-    <!-- MODAL TÀI KHOẢN DUAL-PANEL CHUẨN MẪU (BỌC KHUNG NEON RING XOAY 360) -->
+    <!-- MODAL TÀI KHOẢN DUAL-PANEL -->
     <div class="modal-overlay" id="authModal">
         <div class="neon-wrapper modal-neon-box always-active">
             <div class="neon-ring"></div>
@@ -845,7 +834,6 @@
             <div class="ios-modal auth-dual-container" id="authDualContainer">
                 <div class="close-ios" id="closeAuthModal">✕</div>
 
-                <!-- CỘT TRÁI: ĐĂNG NHẬP -->
                 <div class="auth-panel auth-login-panel">
                     <div class="panel-header">
                         <span class="sub-label">CHÀO MỪNG BẠN TRỞ LẠI</span>
@@ -853,7 +841,6 @@
                         <p>Hệ thống hóa đơn nội bộ Tam Tân</p>
                     </div>
 
-                    <!-- Tra cứu hóa đơn -->
                     <div class="neon-wrapper full-width-btn mb-12">
                         <div class="neon-ring"></div>
                         <a href="hoadonintamtan.html" class="ios-submit-btn btn-green">
@@ -900,7 +887,6 @@
 
                     <div class="divider"><span>Hoặc đăng nhập nhanh</span></div>
 
-                    <!-- Google Auth -->
                     <div class="neon-wrapper full-width-btn">
                         <div class="neon-ring"></div>
                         <button class="ios-submit-btn btn-white" id="googleAuthBtn">
@@ -909,13 +895,11 @@
                         </button>
                     </div>
 
-                    <!-- Chuyển sang Đăng ký trên Mobile -->
                     <div class="switch-mobile-view">
                         Chưa có tài khoản? <a href="#" id="switchToRegisterMobile">Đăng ký ngay</a>
                     </div>
                 </div>
 
-                <!-- CỘT PHẢI: ĐĂNG KÝ -->
                 <div class="auth-panel auth-register-panel">
                     <div class="panel-header">
                         <span class="sub-label">ĐĂNG KÝ</span>
@@ -972,13 +956,11 @@
                         </div>
                     </form>
 
-                    <!-- Chuyển sang Đăng nhập trên Mobile -->
                     <div class="switch-mobile-view">
                         Đã có tài khoản? <a href="#" id="switchToLoginMobile">Đăng nhập</a>
                     </div>
                 </div>
 
-                <!-- BANNER TRUỢT CHUYỂN ĐỔI CHUNG CẢ HAI CỘT -->
                 <div class="auth-overlay-container">
                     <div class="auth-overlay-panel overlay-left">
                         <h2>Đã có tài khoản?</h2>
@@ -1002,7 +984,8 @@
             </div>
         </div>
     </div>
-    <!-- ==================== POPUP HIỆN ĐẠI CAO CẤP - IOS 26 ==================== -->
+
+    <!-- POPUP THÔNG BÁO -->
     <div id="tt-wrapper-all">
         <div class="tt-modal-neon-box">
             <div class="tt-card">
@@ -1046,7 +1029,6 @@
             function showPopup() {
                 if (wrapper) {
                     wrapper.style.display = 'flex';
-                    // Kích hoạt hiệu ứng scale & trượt mượt mà
                     setTimeout(function() {
                         wrapper.classList.add('active-popup');
                     }, 10);
@@ -1060,7 +1042,7 @@
                     setTimeout(function() {
                         wrapper.style.display = 'none';
                         document.body.style.overflow = 'auto';
-                    }, 300); // Khớp với thời gian transition CSS
+                    }, 300);
                 }
             }
 
@@ -1076,7 +1058,6 @@
                 };
             }
 
-            // Hiện popup sau 0.8 giây khi vào trang
             setTimeout(showPopup, 800);
         })();
     </script>
