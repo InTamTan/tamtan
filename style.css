@@ -1227,3 +1227,22 @@ body:not(.light-mode) .tt-time-glow {
         padding-left: 15px !important;
     }
 }
+/* Ghi đè để tắt chữ đậm toàn bộ website */
+h1, h2, h3, h4, h5, h6, 
+.logo, 
+.nav-item a, 
+.hero-title, 
+.hero-subtitle, 
+.auth-btn, 
+.main-btn, 
+.panel-header h2, 
+.tt-header-title,
+.badge,
+.dropdown-menu a {
+    font-weight: 400 !important;
+}
+
+/* Tùy chỉnh riêng cho các nút nếu anh muốn nó vẫn hơi đậm nhẹ (500) */
+.ios-submit-btn, .auth-btn {
+    font-weight: 500 !important;
+}
