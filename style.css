@@ -6,33 +6,33 @@
 }
 
 :root {
-    --bg-color: #08080c;
-    --card-bg: rgba(18, 18, 26, 0.92);
-    --card-border: rgba(255, 255, 255, 0.12);
-    --accent-red: #ff3b30;
-    --accent-gold: #e5c158;
-    --text-main: #ffffff;
-    --text-muted: #a1a1aa;
-    --ios-glass: rgba(255, 255, 255, 0.08);
-    --ios-border: rgba(255, 255, 255, 0.15);
+    --bg-color: #0f172a; /* Nền tối dịu hơn */
+    --card-bg: rgba(30, 41, 59, 0.92);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --accent-red: #d32f2f; /* Đỏ trầm hơn, bớt chói */
+    --accent-gold: #c6a048; /* Vàng đồng nhã nhặn */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --ios-glass: rgba(255, 255, 255, 0.05);
+    --ios-border: rgba(255, 255, 255, 0.1);
     --input-bg: #ffffff;
-    --input-border: rgba(0, 0, 0, 0.15);
-    --modal-bg: rgba(255, 255, 255, 0.98);
+    --input-border: #cbd5e1;
+    --modal-bg: #ffffff;
 }
 
 body.light-mode {
-    --bg-color: #f2f2f7;
-    --card-bg: rgba(255, 255, 255, 0.94);
-    --card-border: rgba(0, 0, 0, 0.08);
-    --accent-red: #ff3b30;
-    --accent-gold: #b38b00;
-    --text-main: #1c1c1e;
-    --text-muted: #636366;
-    --ios-glass: rgba(0, 0, 0, 0.04);
-    --ios-border: rgba(0, 0, 0, 0.12);
+    --bg-color: #f8fafc; /* Nền trắng xám nhẹ, dịu mắt hơn trắng tinh */
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-border: #e2e8f0;
+    --accent-red: #d32f2f;
+    --accent-gold: #a17c1d;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --ios-glass: rgba(0, 0, 0, 0.03);
+    --ios-border: #e2e8f0;
     --input-bg: #ffffff;
-    --input-border: rgba(0, 0, 0, 0.15);
-    --modal-bg: rgba(255, 255, 255, 0.98);
+    --input-border: #cbd5e1;
+    --modal-bg: #ffffff;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
@@ -1245,4 +1245,36 @@ h1, h2, h3, h4, h5, h6,
 /* Tùy chỉnh riêng cho các nút nếu anh muốn nó vẫn hơi đậm nhẹ (500) */
 .ios-submit-btn, .auth-btn {
     font-weight: 500 !important;
+}
+/* Tắt chữ đậm của các thẻ b/strong trong phần liên hệ và footer */
+.contact-info-list b, 
+.contact-info-list strong,
+.footer-col-title,
+.footer-logo span {
+    font-weight: 400 !important;
+}
+/* ==================== HẠ TÔNG XANH XUỐNG MỨC TỐI GIẢN & TRẦM ==================== */
+
+/* 1. Chuyển các nút bấm / thẻ số điện thoại đang bị xanh rực sang xám Slate trầm */
+.btn-blue, 
+.tt-btn-zalo {
+    background: #334155 !important;
+    box-shadow: none !important;
+}
+
+/* 2. Ép các thẻ nền xanh rực khác chuyển về tông trầm */
+[style*="background: rgb(0, 136, 255)"],
+[style*="background:#0088ff"],
+[style*="background: #0088ff"],
+[style*="background: #0068ff"],
+[style*="background: #0044cc"] {
+    background: #334155 !important;
+}
+
+/* 3. Làm dịu các khung giờ và điểm nhấn chữ */
+.tt-time-glow {
+    color: #475569 !important;
+    background: rgba(71, 85, 105, 0.08) !important;
+    border-color: rgba(71, 85, 105, 0.2) !important;
+    text-shadow: none !important;
 }
