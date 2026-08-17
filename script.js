@@ -756,6 +756,12 @@ window.deleteInvoice = async function(id) {
 function renderInvoices() {
     updateDashboardStats();
 
+    // --- PHÂN QUYỀN: LẤY THÔNG TIN NGƯỜI DÙNG ---
+    const user = auth.currentUser;
+    const userEmail = user ? user.email.toLowerCase().trim() : '';
+    // Chỉ tài khoản intamtan.net mới được xem toàn bộ
+    const isCeo = userEmail.includes('@intamtan.net');
+
     const globalSearch = document.getElementById('globalSearch');
     const search = globalSearch ? globalSearch.value.toLowerCase().trim() : '';
     const tbody = document.getElementById('invoiceTableBody');
@@ -768,7 +774,16 @@ function renderInvoices() {
         return (b.timestamp || 0) - (a.timestamp || 0);
     });
 
+    // --- PHÂN QUYỀN: LỌC DỮ LIỆU ---
     const filtered = invoices.filter(i => {
+        if (!isCeo) {
+            const invoiceEmail = (i.companyEmail || '').toLowerCase().trim();
+            // Nếu không phải CEO/Admin, chỉ hiển thị đơn có email trùng khớp
+            if (invoiceEmail !== userEmail) {
+                return false;
+            }
+        }
+
         const matchesFilter = (currentFilter === 'all' || i.status === currentFilter);
         const hasProductMatch = i.products && i.products.some(p => p.content.toLowerCase().includes(search));
         const matchesSearch = (i.companyName || '').toLowerCase().includes(search) || 
