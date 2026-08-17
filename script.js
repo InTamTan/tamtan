@@ -701,6 +701,11 @@ async function handleInvoiceFormSubmit(e) {
     const now = new Date();
     const createdAtStr = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) + ' - ' + now.toLocaleDateString('vi-VN');
 
+    // Lấy thông tin tài khoản đang đăng nhập để gắn vào hóa đơn
+    const currentUser = auth.currentUser;
+    const userEmail = currentUser ? currentUser.email.toLowerCase().trim() : '';
+    const userId = currentUser ? currentUser.uid : '';
+
     const invData = {
         products,
         subtotal,
@@ -712,7 +717,9 @@ async function handleInvoiceFormSubmit(e) {
         companyAddress: document.getElementById('companyAddress').value,
         companyMst: document.getElementById('companyMst').value,
         companyEmail: document.getElementById('companyEmail').value,
-        status: document.getElementById('invoiceStatus').value
+        status: document.getElementById('invoiceStatus').value,
+        createdByEmail: userEmail,
+        createdByUid: userId
     };
 
     if (id) {
@@ -721,6 +728,8 @@ async function handleInvoiceFormSubmit(e) {
             invData.createdAt = invoices[idx].createdAt || createdAtStr;
             invData.timestamp = invoices[idx].timestamp || Date.now();
             invData.redInvoiceFile = invoices[idx].redInvoiceFile || null; 
+            invData.createdByEmail = invoices[idx].createdByEmail || userEmail;
+            invData.createdByUid = invoices[idx].createdByUid || userId;
             invoices[idx] = { id, ...invData };
         }
     } else {
@@ -761,10 +770,7 @@ function renderInvoices() {
     const userEmail = user ? user.email.toLowerCase().trim() : '';
     const userDisplayName = user && user.displayName ? user.displayName.toLowerCase().trim() : '';
 
-    // Danh sách các email hoặc tên tài khoản được công nhận là CEO/Admin tối cao
-    // (Bạn có thể thêm email đăng nhập CEO thực tế của bạn vào đây)
     const ceoEmails = ['intamtan2', 'admin@intamtan.net', 'intamtan.net']; 
-    
     const isCeo = ceoEmails.some(ceo => userEmail.includes(ceo) || userDisplayName.includes(ceo));
 
     // Ẩn / Hiện khối 3 thẻ thống kê (.stats-grid) theo quyền hạn
@@ -789,8 +795,14 @@ function renderInvoices() {
     const filtered = invoices.filter(i => {
         if (!isCeo) {
             const invoiceEmail = (i.companyEmail || '').toLowerCase().trim();
-            // Nếu không phải CEO, chỉ hiển thị đơn có email trùng khớp với tài khoản đăng nhập
-            if (invoiceEmail !== userEmail) {
+            const createdEmail = (i.createdByEmail || '').toLowerCase().trim();
+            const createdUid = i.createdByUid || '';
+            
+            // Khách sẽ thấy hóa đơn nếu do chính tài khoản của họ tạo HOẶC email công ty trùng khớp
+            const matchesUser = (createdEmail && createdEmail === userEmail) || 
+                                (createdUid && user && createdUid === user.uid) || 
+                                (invoiceEmail && invoiceEmail === userEmail);
+            if (!matchesUser) {
                 return false;
             }
         }
