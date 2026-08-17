@@ -746,7 +746,7 @@ window.quickApprove = async function(id) {
 };
 
 window.deleteInvoice = async function(id) {
-    if (confirm("Bạn có chắc chắn muốn xóa vĩnh viễn dữ liệu hóa đơn này khỏi đám mây?")) {
+    if (confirm("Vui lòng xác nhận xóa vĩnh viễn dữ liệu hóa đơn này?")) {
         invoices = invoices.filter(i => i.id !== id);
         renderInvoices();
         await saveToCloudflare();
@@ -756,11 +756,22 @@ window.deleteInvoice = async function(id) {
 function renderInvoices() {
     updateDashboardStats();
 
-    // --- PHÂN QUYỀN: LẤY THÔNG TIN NGƯỜI DÙNG ---
+    // --- PHÂN QUYỀN: XÁC ĐỊNH TÀI KHOẢN CEO ---
     const user = auth.currentUser;
     const userEmail = user ? user.email.toLowerCase().trim() : '';
-    // Chỉ tài khoản intamtan.net mới được xem toàn bộ
-    const isCeo = userEmail.includes('@intamtan.net');
+    const userDisplayName = user && user.displayName ? user.displayName.toLowerCase().trim() : '';
+
+    // Danh sách các email hoặc tên tài khoản được công nhận là CEO/Admin tối cao
+    // (Bạn có thể thêm email đăng nhập CEO thực tế của bạn vào đây)
+    const ceoEmails = ['intamtan2', 'admin@intamtan.net', 'intamtan.net']; 
+    
+    const isCeo = ceoEmails.some(ceo => userEmail.includes(ceo) || userDisplayName.includes(ceo));
+
+    // Ẩn / Hiện khối 3 thẻ thống kê (.stats-grid) theo quyền hạn
+    const statsGrid = document.querySelector('.stats-grid');
+    if (statsGrid) {
+        statsGrid.style.display = isCeo ? 'grid' : 'none';
+    }
 
     const globalSearch = document.getElementById('globalSearch');
     const search = globalSearch ? globalSearch.value.toLowerCase().trim() : '';
@@ -774,11 +785,11 @@ function renderInvoices() {
         return (b.timestamp || 0) - (a.timestamp || 0);
     });
 
-    // --- PHÂN QUYỀN: LỌC DỮ LIỆU ---
+    // --- PHÂN QUYỀN: LỌC DỮ LIỆU HÓA ĐƠN ---
     const filtered = invoices.filter(i => {
         if (!isCeo) {
             const invoiceEmail = (i.companyEmail || '').toLowerCase().trim();
-            // Nếu không phải CEO/Admin, chỉ hiển thị đơn có email trùng khớp
+            // Nếu không phải CEO, chỉ hiển thị đơn có email trùng khớp với tài khoản đăng nhập
             if (invoiceEmail !== userEmail) {
                 return false;
             }
