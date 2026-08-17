@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==================== CHUYỂN ĐỔI TAB ĐĂNG NHẬP / ĐĂNG KÝ ====================
+    // ==================== CHUYỂN ĐỔI ĐĂNG NHẬP / ĐĂNG KÝ ====================
     const authDualContainer = document.getElementById('authDualContainer');
     const switchToRegister = document.getElementById('switchToRegister');
     const switchToLogin = document.getElementById('switchToLogin');
@@ -245,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
         switchToLoginMobile.addEventListener('click', (e) => { e.preventDefault(); authDualContainer.classList.remove('right-panel-active'); });
     }
 
-    // ==================== NÚT TRỜ VỀ ĐẦU TRANG & THEME SÁNG/TỐI ====================
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -261,7 +260,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==================== FIREBASE AUTH FORM SUBMIT ====================
     const savedEmail = localStorage.getItem('rememberedEmail');
     if (savedEmail) {
         const emailInput = document.getElementById('authEmail');
@@ -364,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==================== FORM PHẢN HỒI EMAIL (GỬI QUA EMAILJS) ====================
     const feedbackForm = document.getElementById('feedbackForm');
     if (feedbackForm) {
         feedbackForm.addEventListener('submit', async function(e) {
@@ -380,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = document.getElementById('fbMessage').value.trim();
 
             const SERVICE_ID = "service_7d00hsc";
-            const TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Thay mã Template ID của bạn trên EmailJS vào đây
+            const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
             const PUBLIC_KEY = "DZIF7NMoonp_glgr8";   
 
             const templateParams = {
@@ -701,7 +698,6 @@ async function handleInvoiceFormSubmit(e) {
     const now = new Date();
     const createdAtStr = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) + ' - ' + now.toLocaleDateString('vi-VN');
 
-    // Lấy thông tin tài khoản đang đăng nhập để gắn vào hóa đơn
     const currentUser = auth.currentUser;
     const userEmail = currentUser ? currentUser.email.toLowerCase().trim() : '';
     const userId = currentUser ? currentUser.uid : '';
@@ -765,7 +761,6 @@ window.deleteInvoice = async function(id) {
 function renderInvoices() {
     updateDashboardStats();
 
-    // --- PHÂN QUYỀN: XÁC ĐỊNH TÀI KHOẢN CEO ---
     const user = auth.currentUser;
     const userEmail = user ? user.email.toLowerCase().trim() : '';
     const userDisplayName = user && user.displayName ? user.displayName.toLowerCase().trim() : '';
@@ -773,7 +768,6 @@ function renderInvoices() {
     const ceoEmails = ['intamtan2', 'admin@intamtan.net', 'intamtan.net']; 
     const isCeo = ceoEmails.some(ceo => userEmail.includes(ceo) || userDisplayName.includes(ceo));
 
-    // Ẩn / Hiện khối 3 thẻ thống kê (.stats-grid) theo quyền hạn
     const statsGrid = document.querySelector('.stats-grid');
     if (statsGrid) {
         statsGrid.style.display = isCeo ? 'grid' : 'none';
@@ -791,14 +785,12 @@ function renderInvoices() {
         return (b.timestamp || 0) - (a.timestamp || 0);
     });
 
-    // --- PHÂN QUYỀN: LỌC DỮ LIỆU HÓA ĐƠN ---
     const filtered = invoices.filter(i => {
         if (!isCeo) {
             const invoiceEmail = (i.companyEmail || '').toLowerCase().trim();
             const createdEmail = (i.createdByEmail || '').toLowerCase().trim();
             const createdUid = i.createdByUid || '';
             
-            // Khách sẽ thấy hóa đơn nếu do chính tài khoản của họ tạo HOẶC email công ty trùng khớp
             const matchesUser = (createdEmail && createdEmail === userEmail) || 
                                 (createdUid && user && createdUid === user.uid) || 
                                 (invoiceEmail && invoiceEmail === userEmail);
@@ -874,6 +866,14 @@ function renderInvoices() {
                 ? `<button class="ios-submit-btn btn-green" onclick="quickApprove('${i.id}')" style="height:28px; font-size:0.75rem; padding:0 8px; margin-bottom:4px;"><i class="fa-solid fa-check"></i> Duyệt xong</button>` 
                 : '';
 
+            // Định nghĩa rõ ràng màu sắc cho cả trạng thái "Hoàn thành" và "Nháp" để không bị mờ
+            let statusDisplay = '';
+            if (i.status === 'Hoàn thành') {
+                statusDisplay = `<span style="display: inline-block; background: rgba(52, 199, 89, 0.15); color: #28a745; padding: 4px 10px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; border: 1px solid rgba(52, 199, 89, 0.3);">Hoàn thành</span>`;
+            } else {
+                statusDisplay = `<span style="display: inline-block; background: rgba(255, 149, 0, 0.15); color: #ff9500; padding: 4px 10px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; border: 1px solid rgba(255, 149, 0, 0.3);">Nháp</span>`;
+            }
+
             let productsHtml = `<table class="display-item-table">`;
             if (i.products) {
                 i.products.forEach(p => {
@@ -898,7 +898,7 @@ function renderInvoices() {
             <tr style="background: var(--card-bg);">
                 <td style="padding-left: 20px;">${productsHtml}</td>
                 <td>
-                    <span class="badge ${i.status === 'Hoàn thành' ? 'badge-danger' : ''}">${i.status}</span>
+                    ${statusDisplay}
                 </td>
                 <td style="font-size:0.82rem; font-weight:700; color:var(--text-main);">
                     <i class="fa-regular fa-clock" style="color:#0088ff; margin-right:4px;"></i> ${i.createdAt || 'N/A'}
