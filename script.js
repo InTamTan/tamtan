@@ -965,3 +965,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Tự động chuyển link "/" thành "index.html" khi mở file trực tiếp trên máy tính (ổ C, ổ D)
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.location.protocol === "file:") {
+        document.querySelectorAll('a[href="/"]').forEach(link => {
+            link.setAttribute("href", "index.html");
+        });
+    }
+});
